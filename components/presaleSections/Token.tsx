@@ -45,7 +45,7 @@ const Token = () => {
             alt="line"
             width={0}
             height={0}
-            className="w-[500px] my-8"
+            className="w-[500px] h-[1px] my-8"
           />
           <div className="flex gap-4 items-center">
             <Image
@@ -65,7 +65,7 @@ const Token = () => {
             alt="line"
             width={0}
             height={0}
-            className="w-[500px] my-8"
+            className="w-[500px] h-[1px] my-8"
           />
           <div className="flex gap-4 items-center">
             <Image
@@ -88,7 +88,7 @@ const Token = () => {
             alt="line"
             width={0}
             height={0}
-            className="w-[500px] my-8"
+            className="w-[500px] h-[1px] my-8"
           />
         </div>
         <div className="relative w-full h-[620px] ">

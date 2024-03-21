@@ -127,7 +127,7 @@ export default function Header() {
             </NavbarItem>
           </NavbarContent>
         </Navbar>
-        <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full"/>
+        <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px]"/>
     </div>
   );
 }

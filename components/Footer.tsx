@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full mt-16 mb-18"/>
+      <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mt-16 mb-18"/>
       
       <div className="mt-14 w-full flex justify-between items-center">
         <div className="flex flex-col w-[331px] ">
@@ -97,7 +97,7 @@ export default function Footer() {
 
         </div>
       </div>
-      <Image src={"/img/Line 8.png"} alt="line" width={0} height={0}  className="w-full mt-10 mb-6"/>
+      <Image src={"/img/Line 8.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mt-10 mb-6"/>
       <p className="text-white text-center mt-6">Copyright © 2024 Psychoin</p>
     </div>
   );

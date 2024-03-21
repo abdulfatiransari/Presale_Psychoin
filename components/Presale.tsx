@@ -355,7 +355,7 @@ export default function Presale() {
               alt="line"
               width={0}
               height={0}
-              className="w-[350px] mt-2 mb-2"
+              className="w-[350px] h-[1px] mt-2 mb-2"
             />
             {keys === "crypto" ? (
               <>
@@ -421,7 +421,7 @@ export default function Presale() {
                   alt="line"
                   width={0}
                   height={0}
-                  className="w-[350px] mt-2 mb-2"
+                  className="w-[350px] h-[1px] mt-2 mb-2"
                 />
               </>
             )}
@@ -457,7 +457,7 @@ export default function Presale() {
                   alt="line"
                   width={0}
                   height={0}
-                  className="w-[350px] mt-2 mb-4"
+                  className="w-[350px] h-[1px] mt-2 mb-4"
                 />
                 <div className="flex gap-[4px] mb-2">
                   <span className="text-[16px] text-[#CDCDCD] mt-2">
@@ -478,7 +478,7 @@ export default function Presale() {
               alt="line"
               width={0}
               height={0}
-              className="w-[350px] mt-2 mb-4"
+              className="w-[350px] h-[1px] mt-2 mb-4"
             />
             <div className="flex gap-16 mb-2">
               <span className="text-[16px] text-[#CDCDCD] mt-2">Quantity:</span>
@@ -496,7 +496,7 @@ export default function Presale() {
               alt="line"
               width={0}
               height={0}
-              className="w-[350px] mt-2 mb-4"
+              className="w-[350px] h-[1px] mt-2 mb-4"
             />
             {keys === "crypto" ? (
               <div className="flex justify-center">
@@ -530,7 +530,7 @@ export default function Presale() {
         alt="line"
         width={0}
         height={0}
-        className="w-full mt-10 mb-12"
+        className="w-full h-[1px] mt-10 mb-12"
       />
       <SlidingCompanies />
       <Image
@@ -538,7 +538,7 @@ export default function Presale() {
         alt="line"
         width={0}
         height={0}
-        className="w-full mb-10  mt-12"
+        className="w-full h-[1px] mb-10  mt-12"
       />
       <BotSections />
       <Token />

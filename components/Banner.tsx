@@ -62,18 +62,18 @@ export default function Banner() {
         </div>
       </div>
     </div>
-    <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full mt-10"/>
+    <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mt-10"/>
     <SlidingText/>
-    <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full mb-10"/>
+    <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mb-10"/>
     <Community/>
     <PlayCards/>
     <Play/>
     <Earn/>
     <Build/>
     <OwnWorld/>
-    <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full mt-10"/>
+    <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mt-10"/>
     <SlidingText/>
-    <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full mb-10"/>
+    <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mb-10"/>
     <Investors/>
     <Players/>
     <Contact/>

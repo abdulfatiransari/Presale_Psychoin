@@ -74,7 +74,7 @@ const RoadMap = () => {
                   alt="line"
                   width={0}
                   height={0}
-                  className="w-full my-6"
+                  className="w-full h-[1px] my-6"
                 />
               </div>
             </div>

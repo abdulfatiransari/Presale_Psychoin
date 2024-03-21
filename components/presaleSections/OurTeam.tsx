@@ -87,7 +87,7 @@ const Team = () => {
             alt="line"
             width={0}
             height={0}
-            className="w-full my-2"
+            className="w-full h-[1px] my-2"
           />
             <p className="text-[18px] text-[#CDCDCD]">{card.designation}</p>
             </div>
