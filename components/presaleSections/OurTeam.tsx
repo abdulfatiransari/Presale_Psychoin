@@ -63,8 +63,8 @@ const Team = () => {
         </div>
       </div>
       <div className="mt-10 flex justify-center items-center gap-6">
-        {cardData.map((card) => (
-          <div
+        {cardData.map((card, idx) => (
+          <div key={idx}
             className="rounded-[30px] "
             style={{
               backgroundColor:

@@ -14,7 +14,7 @@ const BotSections = () => {
       </h3>
       <p className="text-[18px] text-[#CDCDCD] text-center mt-4 leading-[28.4px]">
         Phychoin isn't just another trading bot; it's a game-changer.It's not
-        just powerful – it's the epitome of automated trading. Outmaneuver even
+        just powerful - it's the epitome of automated trading. Outmaneuver even
         the most sophisticated institutional traders with us, today.
       </p>
       <div className="flex gap-4 mt-6 mb-10">

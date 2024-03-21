@@ -42,8 +42,8 @@ const RoadMap = () => {
         </h1>
       </div>
       <div className="mt-6 flex justify-center items-center gap-6">
-        {cardData.map((card) => (
-          <div>
+        {cardData.map((card, idx) => (
+          <div key={idx}>
             <div className="relative w-full">
               <Image
                 src={"/img/BackgroundDiv.svg"}

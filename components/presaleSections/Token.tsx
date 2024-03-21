@@ -92,23 +92,23 @@ const Token = () => {
           />
         </div>
         <div className="relative w-full h-[620px] ">
-        <Image
-          src={"/img/Background.svg"}
-          className="w-full h-full"
-          width={100}
-          height={100}
-          alt="background"
-        />
-        <div className="absolute inset-0 flex justify-center items-center mt-20">
           <Image
-            src={"/img/coin2.gif"}
-            className="w-[383px] h-[410px]"
+            src={"/img/Background.svg"}
+            className="w-full h-full"
             width={100}
             height={100}
-            alt="coin"
+            alt="background"
           />
+          <div className="absolute inset-0 flex justify-center items-center mt-20">
+            <Image
+              src={"/img/coin2.gif"}
+              className="w-[383px] h-[410px]"
+              width={100}
+              height={100}
+              alt="coin"
+            />
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );
