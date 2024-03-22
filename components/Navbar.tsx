@@ -107,7 +107,7 @@ export default function Header() {
                 <NavbarMenu className="bg-[#000000]">
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
-                            <Link color={"primary"} href="#" className="w-full" size="lg">
+                            <Link color={"primary"} href="/presale" className="w-full" size="lg">
                                 {item}
                             </Link>
                         </NavbarMenuItem>
