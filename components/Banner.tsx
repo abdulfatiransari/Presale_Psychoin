@@ -15,7 +15,7 @@ import Contact from "./sections/Contact";
 export default function Banner() {
   return (
     <div>
-    <div className="flex pl-28 justify-between item-center">
+    <div className="flex pl-28 max-md:px-8 max-md:justify-center justify-between item-center">
       <div className="flex flex-col py-12 gap-2 w-[530px] ">
         <div className="flex gap-4 items-center">
           <Image src={"/img/PSYCHOIN.png"} alt="logo" width={45} height={45} />
@@ -30,7 +30,7 @@ export default function Banner() {
           Make your home in a world of unlimited adventure. Master skills and
           play with friends. Build new communities.
         </p>
-        <div className="flex gap-4 mt-16">
+        <div className="flex gap-4 mt-16 flex-wrap">
           <Button className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
             Play For Free
           </Button>
@@ -46,13 +46,13 @@ export default function Banner() {
           </Button>
         </div>
       </div>
-      <div className="flex flex-col relative">
+      <div className="flex flex-col relative max-md:hidden">
         <div className="flex justify-end pr-[70px] mt-6">
         <Button className="font-semibold absolute flex justify-end text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
           Play Now
         </Button>
         </div>
-        <div className="w-full h-full">
+        <div className="w-full h-full flex">
         <Image
           src={"/img/banner.gif"}
           width={745}

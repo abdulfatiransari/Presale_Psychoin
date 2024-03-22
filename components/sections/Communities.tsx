@@ -4,28 +4,28 @@ import React from "react";
 
 const Community = () => {
   return (
-    <div className="flex px-28 gap-10 mt-20">
-      <div className="relative w-full h-[620px] ">
-        <Image
+    <div className="flex px-28 max-md:px-8 gap-10 mt-20 max-md:flex-col">
+      <div className="relative w-full">
+        {/* <Image
           src={"/img/Background.svg"}
-          className="w-full h-full"
+          className="w-full h-full min-w-[280px]"
           width={100}
           height={100}
           alt="background"
-        />
-        <div className="absolute inset-0 flex justify-center items-center mt-20">
+        /> */}
+        <div className="p-4 inset-0 flex mt-20 bg-[url('/img/Background.svg')] bg-contain bg-no-repeat max-w-[390px]">
           <Image
             src={"/img/coin.gif"}
-            className="w-[383px] h-[410px]"
-            width={100}
-            height={100}
+            className="w-full h-auto min-w-[370px] min-h-[517px] max-md:max-w-[280px]"
+            width={283}
+            height={517}
             alt="coin"
           />
         </div>
       </div>
 
       <div className="flex items-center ml-10">
-        <div className="flex flex-col w-[530px]">
+        <div className="flex flex-col w-full">
         <div className="flex justify-end pr-[70px] mb-16">
           <Button className="font-semibold flex justify-end text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
             Play For Free
