@@ -31,17 +31,17 @@ const cardData = [
 
 const RoadMap = () => {
   return (
-    <div className="flex flex-col w-full px-28 py-10 gap-4">
+    <div className="flex flex-col w-full px-28 py-10 gap-4  max-sm:px-8 max-md:px-10 max-md:mb-10">
       <div className="flex flex-col">
-        <p className="text-[18px] text-[#CDCDCD] font-semibold mb-1">ROADMAP</p>
-        <p className="text-[24px] text-white font-semibold mb-1">
+        <p className="text-[18px] max-sm:text-[14px] text-[#CDCDCD] font-semibold mb-1">ROADMAP</p>
+        <p className="text-[24px] max-md:text-[22px] max-sm:text-[18px] text-white font-semibold mb-1">
           Bitbot's Odyssey:
         </p>
-        <h1 className="text-[#6D00CC] text-[48px] font-semibold">
+        <h1 className="text-[#6D00CC] text-[48px] max-md:text-[32px] max-sm:text-[28px] font-semibold">
           Revolutionizing Trading in 2024 and Beyond.
         </h1>
       </div>
-      <div className="mt-6 flex justify-center items-center gap-6">
+      <div className="mt-6 flex justify-between max-sm:justify-center  max-md:justify-center items-center gap-6 max-sm:flex-wrap max-md:flex-wrap">
         {cardData.map((card, idx) => (
           <div key={idx}>
             <div className="relative w-full">

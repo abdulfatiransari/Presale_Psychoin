@@ -25,21 +25,21 @@ const cardData = [
 
 const Team = () => {
   return (
-    <div className="flex flex-col w-full px-28 py-10 gap-2">
-      <div className="flex justify-between items-center">
+    <div className="flex flex-col w-full px-28 py-10 gap-2 max-sm:px-8 max-md:px-10">
+      <div className="flex justify-between items-center max-sm:flex-wrap">
         <div className="flex flex-col">
-          <p className="text-[18px] text-[#CDCDCD] font-semibold mb-1">
+          <p className="text-[18px]  max-sm:text-[14px] text-[#CDCDCD] font-semibold mb-1">
             OUR TEAM
           </p>
-          <h1 className="text-white text-[48px] font-semibold w-[530px]">
+          <h1 className="text-white text-[48px] max-md:text-[32px] max-sm:text-[28px] font-semibold w-[530px] max-md:w-[430px] max-sm:w-[330px]">
             Meet the Minds Shaping Psychoin
           </h1>
         </div>
-        <Button className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-4 mt-24 text-base">
+        <Button className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-4 mt-24 max-sm:mt-4 text-base">
           See All Team
         </Button>
       </div>
-      <div className="flex justify-between items-center gap-16 mt-14">
+      <div className="flex justify-between items-center gap-16 mt-14 max-md:flex-wrap max-sm:flex-wrap">
         <div className="flex flex-col gap-1 justify-center items-center w-full">
           <Image src={"/img/IconTeam1.svg"} width={40} height={40} alt="icon" />
           <p className="text-[#CDCDCD] text-[18px] text-center mt-2">
@@ -62,7 +62,7 @@ const Team = () => {
           </p>
         </div>
       </div>
-      <div className="mt-10 flex justify-center items-center gap-6">
+      <div className="mt-10 flex justify-center items-center gap-6 max-md:flex-wrap max-sm:flex-wrap">
         {cardData.map((card, idx) => (
           <div key={idx}
             className="rounded-[30px] "
@@ -81,7 +81,7 @@ const Team = () => {
               alt="member"
             />
             
-            <h4 className="text-[32px] ">{card.memeber}</h4>
+            <h4 className="text-[32px] max-sm:text-[28px]">{card.memeber}</h4>
             <Image
             src={"/img/Line 8.png"}
             alt="line"

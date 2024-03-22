@@ -9,13 +9,13 @@ import { RiFacebookFill, RiLinkedinFill } from "react-icons/ri";
 export default function Footer() {
   return (
     <div
-      className="w-full rounded-t-[30px] py-10 px-28"
+      className="w-full rounded-t-[30px] py-10 px-28  max-sm:px-6"
       style={{
         background:
           "linear-gradient(180deg, rgba(109, 0, 204, 0.2) 50%, #6D00CC 103.39%",
       }}
     >
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between items-center max-md:flex-wrap ">
         <div className="flex flex-col w-[560px]">
           <h4 className="font-semibold text-xl">Subscribe to Newsletter</h4>
           <p className="text-[#CDCDCD] text-base mt-4">
@@ -23,7 +23,7 @@ export default function Footer() {
             ultrices. Aenean sed elit mattis sagittis id velit sed scelerisque.
           </p>
         </div>
-        <div className="flex gap-4 items-center w-[#495px]">
+        <div className="flex gap-4 items-center w-[#495px] max-sm: mt-6">
           <input
             type="search"
             placeholder="Enter your Email..."
@@ -42,7 +42,7 @@ export default function Footer() {
 
       <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mt-16 mb-18"/>
       
-      <div className="mt-14 w-full flex justify-between items-center">
+      <div className="mt-14 w-full flex justify-between items-center flex-wrap">
         <div className="flex flex-col w-[331px] ">
           <h4 className="font-semibold text-2xl">Psychoin</h4>
           <p className="text-[#CDCDCD] text-base mt-4">
@@ -73,7 +73,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex gap-16">
+          <div className="flex gap-16 flex-wrap max-sm:mt-6">
             <div className="flex flex-col gap-2">
                 <h5 className="font-semibold text-[24px]">Company</h5>
                 <p className="text-base text-[#CDCDCD]">Home</p>
