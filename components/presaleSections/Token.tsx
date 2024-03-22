@@ -4,8 +4,8 @@ import React from "react";
 
 const Token = () => {
   return (
-    <div className="flex flex-col w-full px-28 py-10 gap-2">
-      <div className="flex justify-between items-center">
+    <div className="flex flex-col w-full px-28 py-10 gap-2 ">
+      <div className="flex justify-between items-center max-sm:flex-wrap max-md:flex-wrap">
         <div className="flex flex-col">
           <p className="text-[18px] text-[#CDCDCD] font-semibold mb-1">
             TRADE, EARN, RETIRE
@@ -23,7 +23,7 @@ const Token = () => {
           Learn More
         </Button>
       </div>
-      <div className="flex justify-center items-center gap-20 mt-10">
+      <div className="flex justify-center items-center gap-20 mt-10 max-sm:flex-wrap max-md:flex-wrap">
         <div className="flex flex-col">
           <div className="flex gap-4 items-center">
             <Image

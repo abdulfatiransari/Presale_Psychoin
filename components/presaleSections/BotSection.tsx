@@ -4,14 +4,14 @@ import React from "react";
 
 const BotSections = () => {
     return (
-        <div className="flex flex-col w-full px-28 py-10 gap-2 justify-center items-center">
+        <div className="flex flex-col w-full px-28 max-md:px-10 max-sm:px-8 py-10 gap-2 justify-center items-center">
             <div className="flex gap-2 items-center">
                 <Image src={"/img/PSYCHOIN.png"} alt="logo" width={25} height={25} className="w-[25px] h-[25px]" />
                 <p className="font-semibold text-[18px] text-white">PSYCHOIN</p>
             </div>
-            <h3 className="text-[56px] font-semibold text-[#6D00CC] leading-[67.2px]">Most Powerful Bot Ever</h3>
+            <h3 className="text-[56px] font-semibold text-[#6D00CC] leading-[67.2px]">Most Powerfull Bot Ever</h3>
             <p className="text-[18px] text-[#CDCDCD] text-center mt-4 leading-[28.4px]">
-                Phychoin isn't just another trading bot; it's a game-changer.It's not just powerful - it's the epitome
+                Phychoin isn't just another trading bot; it's a game-changer.It's not just powerfull - it's the epitome
                 of automated trading. Outmaneuver even the most sophisticated institutional traders with us, today.
             </p>
             <div className="flex gap-4 mt-6 mb-10">
