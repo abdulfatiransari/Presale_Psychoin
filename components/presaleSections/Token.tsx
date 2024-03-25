@@ -4,7 +4,7 @@ import React from "react";
 
 const Token = () => {
   return (
-    <div className="flex flex-col w-full px-28 py-10 gap-2 ">
+    <div className="flex flex-col w-full px-28 py-10 gap-2 max-sm:px-8 max-md:px-10">
       <div className="flex justify-between items-center max-sm:flex-wrap max-md:flex-wrap">
         <div className="flex flex-col">
           <p className="text-[18px] text-[#CDCDCD] font-semibold mb-1">
@@ -23,8 +23,8 @@ const Token = () => {
           Learn More
         </Button>
       </div>
-      <div className="flex justify-center items-center gap-20 mt-10 max-sm:flex-wrap max-md:flex-wrap">
-        <div className="flex flex-col">
+      <div className="flex justify-between items-center gap-20 mt-10 max-sm:flex-wrap max-md:flex-wrap">
+        <div className="flex flex-col w-full">
           <div className="flex gap-4 items-center">
             <Image
               src={"/img/IconToken1.svg"}
@@ -91,23 +91,19 @@ const Token = () => {
             className="w-[500px] h-[1px] my-8"
           />
         </div>
-        <div className="relative w-full h-[620px] ">
+        <div
+          className="rounded-t-[30px] px-10 py-4 flex justify-center items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 w-full"
+          style={{
+            background: "radial-gradient(at center top, #222833, #0C0C0C)",
+          }}
+        >
           <Image
-            src={"/img/Background.svg"}
-            className="w-full h-full"
-            width={100}
-            height={100}
-            alt="background"
-          />
-          <div className="absolute inset-0 flex justify-center items-center mt-20">
-            <Image
               src={"/img/coin2.gif"}
-              className="w-[383px] h-[410px]"
+              className="w-[383px] h-[410px] mt-20"
               width={100}
               height={100}
               alt="coin"
             />
-          </div>
         </div>
       </div>
     </div>

@@ -3,9 +3,9 @@ import React from "react";
 
 const Players = () => {
   return (
-    <div className="flex px-28 justify-center mt-10">
+    <div className="flex px-28 justify-center gap-4 mt-10 max-md:px-10 max-sm:px-8 max-sm:flex-wrap max-md:flex-wrap">
        <div
-          className="rounded-t-[30px] border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 px-4 py-10 flex justify-center items-center w-full"
+          className="rounded-t-[30px] max-sm:flex-wrap border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 px-4 py-10 flex justify-center items-center w-full gap-6 mb-6"
           style={{
             background:'radial-gradient(at center top, #222833, #0C0C0C)'}}
         >
@@ -25,36 +25,9 @@ const Players = () => {
             </p>
           </div>
         </div>
-      {/* <div className="relative w-full h-[490px]">
-        <Image
-          src={"/img/Background.svg"}
-          className="w-full h-full"
-          width={100}
-          height={100}
-          alt="background"
-        />
-        <div className="absolute inset-0 flex flex-col justify-center items-center">
-          <h4 className="text-white font-semibold my-6 text-[32px]">
-            Over 9,000 Players
-          </h4>
-          <Image
-            src={"/img/crad.gif"}
-            className="w-[360px] h-[300px]"
-            width={100}
-            height={100}
-            alt="coin"
-          />
-          <div className="flex justify-center items-center w-[400px] mt-6">
-            <p className="text-[18px] text-[#CDCDCD] text-center leading-6">
-              Join one of the largest web3 communities & a player base who is
-              eager to experience and play new games.
-            </p>
-          </div>
-        </div>
-      </div> */}
       <div className="flex flex-col">
         <div
-          className="rounded-t-[30px] border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 px-8 py-10 flex justify-center items-center gap-6"
+          className="rounded-t-[30px] border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 px-4 py-10 flex justify-center items-center gap-6 max-sm:flex-wrap"
           style={{
             background:'radial-gradient(at center top, #222833, #0C0C0C)'}}
         >
@@ -75,7 +48,7 @@ const Players = () => {
           </div>
         </div>
         <div
-          className="rounded-t-[30px] px-8 pt-10 pb-6 flex justify-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 gap-6 relative top-[-28px] z-10"
+          className="rounded-t-[30px] px-4 pt-10 pb-6 flex justify-center  items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 gap-6 relative top-[-28px] z-10 max-sm:flex-wrap"
             style={{
               background:'radial-gradient(at center top, #222833, #0C0C0C)'
           }}

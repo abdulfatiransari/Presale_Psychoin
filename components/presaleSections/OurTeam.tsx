@@ -31,7 +31,7 @@ const Team = () => {
           <p className="text-[18px]  max-sm:text-[14px] text-[#CDCDCD] font-semibold mb-1">
             OUR TEAM
           </p>
-          <h1 className="text-white text-[48px] max-md:text-[32px] max-sm:text-[28px] font-semibold w-[530px] max-md:w-[430px] max-sm:w-[330px]">
+          <h1 className="text-white text-[48px] max-md:text-[32px] max-sm:text-[28px] font-semibold w-[530px] max-md:w-[430px] max-sm:w-full">
             Meet the Minds Shaping Psychoin
           </h1>
         </div>

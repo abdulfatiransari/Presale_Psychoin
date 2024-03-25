@@ -3,51 +3,63 @@ import Image from "next/image";
 import React from "react";
 
 const cardData = [
-  { id: 1, buttonName: "NuCyber", srcUrl: "/img/card1.svg" },
-  { id: 2, buttonName: "Farmland", srcUrl: "/img/card2.svg" },
-  { id: 3, buttonName: "Farmland", srcUrl: "/img/card3.svg" },
-  { id: 4, buttonName: "And More...", srcUrl: "/img/card4.svg" },
+  {
+    id: 1,
+    buttonName: "Empowerment through Neuroscience",
+    srcUrl: "/img/neuroscience.svg",
+  },
+  {
+    id: 2,
+    buttonName: "Investment in Personal Growth",
+    srcUrl: "/img/growth.svg",
+  },
+  {
+    id: 3,
+    buttonName: "Community Recognition and Rewards",
+    srcUrl: "/img/tokenCoins.svg",
+  },
 ];
 
 const PlayCards = () => {
   return (
-    <div className="flex flex-col px-28">
-      <div className="flex gap-3">
+    <div className="flex flex-col px-28 w-full justify-center items-center max-md:px-10 max-sm:px-8 mt-20 ">
+      <div className="flex gap-6 flex-wrap max-lg:flex-wrap max-md:flex-wrap max-sm:flex-wrap">
         {cardData.map((card) => (
-          <div key={card.id} className="relative w-full">
+          <div
+            key={card.id}
+            className="rounded-t-[30px] px-8 py-6 max-sm:px-2 max-sm:py-2 gap-10 flex-col flex-wrap justify-center items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 w-fit h-full max-md:w-full max-md:h-full max-sm:w-full max-sm:h-full max-xl1:w-full max-lg1:w-full max-md1:w-full"
+            style={{
+              background: "radial-gradient(at center top, #222833, #0C0C0C)",
+            }}
+          >
+            <div className="flex justify-center items-center">
             <Image
-              src={"/img/Background.svg"}
-              className="w-full h-full"
+              src={card.srcUrl}
+              className="w-[353px] h-[246px] mb-6 max-sm:w-[300px] max-sm:h-[200px]"
               width={100}
               height={100}
-              alt="background"
+              alt="coin"
             />
-            <div className="absolute inset-0 flex justify-center items-center mt-4 mx-4 flex-col">
-              <Image
-                src={card.srcUrl}
-                className="w-[262px] h-[246px]"
-                width={100}
-                height={100}
-                alt="coin"
-              />
-              <Button
-                className="font-semibold flex text-white rounded-[100px] px-6 py-4 text-base mt-4"
-                style={{
-                  background:
-                    "linear-gradient(90deg, rgba(145, 173, 186, 0.8) -11.36%, rgba(32, 81, 102, 0.096) 104.55%)",
-                  border: "1px solid #FFFFFF",
-                }}
-              >
-                {card.buttonName}
-              </Button>
+            </div>
+            <div className="flex justify-center items-center">
+            <Button
+              className="font-semibold flex text-white rounded-[100px] px-8 py-4 text-base max-sm:text-[12px]"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(145, 173, 186, 0.8) -11.36%, rgba(32, 81, 102, 0.096) 104.55%)",
+                border: "1px solid #FFFFFF",
+              }}
+            >
+              {card.buttonName}
+            </Button>
             </div>
           </div>
         ))}
       </div>
       <div className="flex justify-center items-center mt-10">
-      <Button className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
-        Play For Free
-      </Button>
+        <Button className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
+          Join Us
+        </Button>
       </div>
     </div>
   );

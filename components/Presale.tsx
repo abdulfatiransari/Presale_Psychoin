@@ -208,7 +208,7 @@ export default function Presale() {
     return (
         <div>
             <div
-                className="flex flex-col max-w-full px-28 py-10 max-md:px-8"
+                className="flex flex-col max-w-full px-28 py-10 max-md:px-8 max-sm:px-8"
                 style={{
                     backgroundImage: 'url("/img/presaleBanner.svg")',
                     backgroundRepeat: "no-repeat",
@@ -246,8 +246,8 @@ export default function Presale() {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-end items-center max-sm:items-start max-sm:justify-start">
-                    <div className="flex flex-col ">
+                <div className="flex justify-end items-center max-sm:items-center max-sm:justify-center">
+                    <div className="flex flex-col">
                         <h1 className="w-[400px] max-sm:max-w-[250px] text-[48px] max-sm:text-[36px] text-white font-semibold">
                             Self-Custodial Trading Bot
                         </h1>
@@ -471,7 +471,7 @@ export default function Presale() {
                 </div>
             </div>
             <Timer />
-            <h1 className="text-center text-white text-[20px] my-10 font-semibold">
+            <h1 className="text-center text-white text-[20px] my-10 font-semibold max-sm:px-8">
                 Supported by many companies around the world
             </h1>
             <Image src={"/img/Line 2.png"} alt="line" width={0} height={0} className="w-full h-[1px] mt-10 mb-12" />

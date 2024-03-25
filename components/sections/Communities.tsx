@@ -4,33 +4,23 @@ import React from "react";
 
 const Community = () => {
   return (
-    <div className="flex px-28 max-md:px-8 gap-10 mt-20 max-md:flex-col">
-      <div className="relative w-full">
-        {/* <Image
-          src={"/img/Background.svg"}
-          className="w-full h-full min-w-[280px]"
+    <div className="flex px-28 max-md:px-8 gap-10 mt-20 max-md:flex-col max-lg:flex-wrap max-md:flex-wrap max-sm:flex-wrap justify-center" >
+      <div 
+        className="rounded-t-[30px] px-2 py-4 max-sm:px-2 max-sm:py-0 flex justify-center items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 w-[538px] h-[620px] max-md:w-full max-md:h-full max-sm:w-full max-sm:h-full max-xl1:w-full max-lg1:w-full max-md1:w-full"
+        style={{
+          background: "radial-gradient(at center top, #222833, #0C0C0C)",
+        }}
+      >
+        <Image
+          src={"/img/bulb.svg"}
+          className="w-[383px] h-[410px] mt-20 max-sm:mt-6 max-md:mt-6"
           width={100}
           height={100}
-          alt="background"
-        /> */}
-        <div className="p-4 inset-0 flex mt-20 bg-[url('/img/Background.svg')] bg-contain bg-no-repeat max-w-[390px]">
-          <Image
-            src={"/img/coin.gif"}
-            className="w-full h-auto min-w-[370px] min-h-[517px] max-md:max-w-[280px]"
-            width={283}
-            height={517}
-            alt="coin"
-          />
-        </div>
+          alt="coin"
+        />
       </div>
-
-      <div className="flex items-center ml-10">
+      <div className="flex items-center">
         <div className="flex flex-col w-full">
-        <div className="flex justify-end pr-[70px] mb-16">
-          <Button className="font-semibold flex justify-end text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
-            Play For Free
-          </Button>
-        </div>
           <div className="flex gap-2">
             <Image
               src={"/img/PSYCHOIN.png"}
@@ -40,20 +30,27 @@ const Community = () => {
             />
             <p className="font-bold text-[18px] text-white">PSYCHOIN</p>
           </div>
-          <h3 className="text-[48px] font-semibold text-[#6D00CC] leading-[55px]">
+          <h3 className="text-[48px] font-semibold text-[#6D00CC] leading-[55px] mb-6 max-md:text-[32px] max-sm:text-[28px] max-sm:leading-10 max-md:leading-10">
             Where Communities Come To Life
           </h3>
-          <p className="text-[18px] text-[#CDCDCD] leading-[28.8px]">
-            Pychoin is building a platform where users can build games that
-            natively integrate digital collectibles.
+          <p className="text-[18px] text-[#CDCDCD] leading-[28.8px] mb-4 max-md:text-[18px] max-sm:text-[16px]">
+            A community over 120k strong is stepping into a new era of mental
+            well-being.
+          </p>
+          <p className="text-[18px] text-[#CDCDCD] leading-[28.8px] mb-4">
+            Your achievements in personal growth are recognized and rewarded
+            with PSYCHOIN TOKEN, laying the foundation for a healthier, happier
+            world.
           </p>
           <p className="text-[18px] text-[#CDCDCD] leading-[28.8px]">
-            Create fun, memorable experiences where your users truly own their
-            progress.
+            A dynamic community awaits, where your contributions shape our
+            collective future.
           </p>
-          <p className="text-[18px] text-[#CDCDCD] leading-[28.8px]">
-            Build around existing IP.
-          </p>
+          <div className="flex justify-start items-center mt-6">
+          <Button className="font-semibold text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
+          Join Us
+        </Button>
+          </div>
         </div>
       </div>
     </div>

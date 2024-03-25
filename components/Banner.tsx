@@ -19,21 +19,17 @@ export default function Banner() {
       <div className="flex flex-col py-12 gap-2 w-[530px] ">
         <div className="flex gap-4 items-center">
           <Image src={"/img/PSYCHOIN.png"} alt="logo" width={45} height={45} />
-          <p className="font-bold text-[32px] text-[#6D00CC]">
+          <p className="font-bold text-[32px] text-[#6D00CC] max-md:text-[28px] max-sm:text-[24px]">
             PSYCHOIN
           </p>
         </div>
-        <h3 className="text-[48px] font-semibold text-white leading-[67.2px]">
-          Explore a New Type of Gameplay
+        <h3 className="text-[48px] font-semibold text-white leading-[67.2px] max-md:text-[32px] max-sm:text-[28px] max-md:leading-10 max-sm:leading-10">
+        A Revolutionary Approach to Well-being
         </h3>
-        <p className="text-[24px] text-[#CDCDCD] mt-4 leading-[38.4px]">
-          Make your home in a world of unlimited adventure. Master skills and
-          play with friends. Build new communities.
+        <p className="text-[24px] text-[#CDCDCD] mt-4 leading-[38.4px] max-md:text-[20px] max-sm:text-[18px] max-md:leading-8 max-sm:leading-8">
+        Dive into Self-Harbor, where the latest neuroscience and psychology empower a community dedicated to democratizing well-being. With Psychoin token at its core, unlock a new dimension of mental health and personal development.
         </p>
-        <div className="flex gap-4 mt-16 flex-wrap">
-          <Button className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
-            Play For Free
-          </Button>
+        <div className="flex gap-4 mt-4">
           <Button
             className="font-semibold flex text-white rounded-[100px] px-8 py-6 text-base"
             style={{
@@ -46,15 +42,15 @@ export default function Banner() {
           </Button>
         </div>
       </div>
-      <div className="flex flex-col relative max-md:hidden">
-        <div className="flex justify-end pr-[70px] mt-6">
-        <Button className="font-semibold absolute flex justify-end text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
-          Play Now
+      <div className="flex flex-col relative max-md:hidden items-end">
+        <div className="flex absolute mt-6 pr-16">
+        <Button className="font-semibold text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
+          Join Us
         </Button>
         </div>
         <div className="w-full h-full flex">
         <Image
-          src={"/img/banner.gif"}
+          src={"/img/landingBanner.gif"}
           width={745}
           height={100}
           alt="banner"
