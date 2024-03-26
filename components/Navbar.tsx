@@ -39,20 +39,14 @@ export default function Header() {
     <div>
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
-        shouldHideOnScroll
-        className="bg-transparent py-1 px-8 max-sm:px-2 max-sm:pl-0 flex justify-between [&>header]:!max-w-full"
+        // shouldHideOnScroll
+        isMenuOpen={isMenuOpen}
+        className="bg-transparent py-1 px-8 max-sm:px-2 max-sm:pl-0 flex justify-between [&>header]:!max-w-full z-10"
       >
-        
         <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         className="md:hidden "
         />
-        {/* {!isMenuOpen ? 
-        <IoMenu onClick={() => setIsMenuOpen(true)} className="md:hidden"/> 
-        :
-        <IoCloseSharp onClick={() => setIsMenuOpen(false)}/>
-        } */}
-        
         <NavbarBrand className="flex items-center gap-2">
           <Logo />
           <p className="font-semibold text-4xl max-sm:text-2xl max-md:text-3xl text-inherit">

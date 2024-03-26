@@ -71,7 +71,7 @@ export default function Banner() {
     <SlidingText/>
     <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mb-10"/>
     <Investors/>
-    <Players/>
+    {/* <Players/> */}
     <Contact/>
     </div>
   );

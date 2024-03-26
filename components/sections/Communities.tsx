@@ -6,14 +6,14 @@ const Community = () => {
   return (
     <div className="flex px-28 max-md:px-8 gap-10 mt-20 max-md:flex-col max-lg:flex-wrap max-md:flex-wrap max-sm:flex-wrap justify-center" >
       <div 
-        className="rounded-t-[30px] px-2 py-4 max-sm:px-2 max-sm:py-0 flex justify-center items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 w-[538px] h-[620px] max-md:w-full max-md:h-full max-sm:w-full max-sm:h-full max-xl1:w-full max-lg1:w-full max-md1:w-full"
+        className="rounded-t-[30px] px-6 py-4 max-sm:px-6 max-sm:py-6 flex justify-center items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 w-[538px] h-[620px] max-md:w-full max-md:h-full max-sm:w-full max-sm:h-full max-xl1:w-full max-lg1:w-full max-md1:w-full"
         style={{
           background: "radial-gradient(at center top, #222833, #0C0C0C)",
         }}
       >
         <Image
-          src={"/img/bulb.svg"}
-          className="w-[383px] h-[410px] mt-20 max-sm:mt-6 max-md:mt-6"
+          src={"/img/growth.gif"}
+          className="w-[383px] h-[517px]"
           width={100}
           height={100}
           alt="coin"
