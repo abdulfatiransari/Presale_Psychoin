@@ -23,7 +23,7 @@ const cardData = [
 const PlayCards = () => {
   return (
     <div className="flex flex-col px-28 w-full justify-center items-center max-md:px-10 max-sm:px-8 mt-20 ">
-      <div className="flex gap-6 flex-wrap max-lg:flex-wrap max-md:flex-wrap max-sm:flex-wrap">
+      <div className="flex gap-6 flex-wrap max-lg:flex-wrap max-md:flex-wrap max-sm:flex-wrap justify-center items-center">
         {cardData.map((card) => (
           <div
             key={card.id}
