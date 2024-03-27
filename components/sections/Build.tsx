@@ -36,7 +36,7 @@ const Build = () => {
         }}
       >
         <Image
-          src={"/img/brain.gif"}
+          src={"/img/mentalHealth.gif"}
           className="w-[383px] h-[517px]"
           width={100}
           height={100}

@@ -36,7 +36,7 @@ const Play = () => {
         }}
       >
         <Image
-          src={"/img/bulb.svg"}
+          src={"/img/brain.gif"}
           className="w-[383px] h-[517px]"
           width={100}
           height={100}

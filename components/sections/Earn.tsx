@@ -12,7 +12,7 @@ const Earn = () => {
         }}
       >
         <Image
-          src={"/img/bulb.svg"}
+          src={"/img/success.gif"}
           className="w-[383px] h-[517px]"
           width={100}
           height={100}
