@@ -41,7 +41,7 @@ const FAQ = () => {
         </h1>
       </div>
 
-        <div className="flex flex-col w-[380px]">
+        <div className="flex flex-col w-[380px] mb-10">
           {faqArray.map((data, idx) => {
             return (
               <div key={idx}>

@@ -18,6 +18,7 @@ import {
   useWeb3ModalAccount,
   useWeb3ModalProvider,
 } from "@web3modal/ethers5/react";
+import PresaleFunc from "./PresaleFunc";
 
 export default function Presale() {
   const { walletProvider } = useWeb3ModalProvider();
@@ -29,6 +30,7 @@ export default function Presale() {
   const [quantity, setQuantity] = useState<any>("100");
   const [recieverAddress, setRecieverAddress] = useState<string>();
   const [youPurchased, setYouPurchased] = useState<string>();
+  const [loading, setLoading] = useState(false);
   const [bal, setBal] = useState<string>();
   const [keys, setKeys] = useState<string>("crypto");
   const [wallet, setWallet] = useState<string>("");
@@ -147,7 +149,7 @@ export default function Presale() {
   const buyToken = async () => {
     try {
       if (!walletProvider) {
-        throw new Error("Wallet provider not available");
+        return toast.error("Wallet provider not available");
       }
       const ethersProvider = new ethers.providers.Web3Provider(walletProvider);
       const signer = ethersProvider.getSigner();
@@ -165,8 +167,7 @@ export default function Presale() {
       const calculateValue = Number(quantity) * Number(calculatePrice);
 
       if (Number(bal) <= Number(quantity) * Number(price)) {
-        toast.error("Insufficient Funds");
-        return;
+        return toast.error("Insufficient Funds");
       }
 
       const buyTokens = await presaleContract.purchaseTokens(
@@ -179,9 +180,12 @@ export default function Presale() {
       );
       const result = await buyTokens.wait();
       console.log(result);
-      toast("Successfuly Transfered");
+      setLoading(true);
+      return toast.success("Successfuly Transfered");
     } catch (error) {
       console.log(error);
+      setLoading(true);
+      return toast.error("Transfered Failed");
     }
   };
 
@@ -203,25 +207,27 @@ export default function Presale() {
   const buyFiat = async () => {
     try {
       if (!recieverAddress) {
-        toast.error("Please provide a wallet address");
-        return;
+        return toast.error("Please provide a wallet address");
       }
       if (recieverAddress) {
         const verifyAddress = ethers.utils.getAddress(recieverAddress);
       } else {
-        toast.error("Invalid Address");
+        return toast.error("Invalid Address");
       }
+      
       const response = await axios.post("/api/createNormalSession", {
         amount: Math.round(price.toString() * 100),
         quantity: quantity,
         tokenAddress: presaleAddress,
-        walletAddress: wallet,
+        walletAddress: recieverAddress,
       });
+
+      console.log(response)
       const { url } = response.data;
-      // router.push(url);
       window.open(url, "_blank");
     } catch (error) {
       console.log(error);
+      return toast.error("Failed transaction");
     }
   };
 
@@ -525,6 +531,7 @@ export default function Presale() {
                   <Button
                     onClick={buyToken}
                     className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base"
+                    isLoading={loading}
                   >
                     Buy Token
                   </Button>
@@ -534,6 +541,7 @@ export default function Presale() {
                   <Button
                     onClick={() => buyFiat()}
                     className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base"
+                    isLoading={loading}
                   >
                     Buy Token via Fiat
                   </Button>

@@ -262,7 +262,7 @@ export default function PresaleFunc() {
         getBalance();
         timer();
         convertTimestamp();
-        getquery();
+        // getquery();
         // checkPaymentStatus();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [address, timers]);
