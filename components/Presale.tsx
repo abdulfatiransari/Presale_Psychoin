@@ -541,7 +541,6 @@ export default function Presale() {
                   <Button
                     onClick={() => buyFiat()}
                     className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base"
-                    isLoading={loading}
                   >
                     Buy Token via Fiat
                   </Button>
