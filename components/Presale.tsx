@@ -36,7 +36,7 @@ export default function Presale() {
   const [wallet, setWallet] = useState<string>("");
 
   const presaleAddress = "0x455f9DD747F1e1DA8Bc9c0842a8C11A2cB7045C9";
-
+  
   const owner = async () => {
     try {
       if (walletProvider) {
@@ -169,7 +169,7 @@ export default function Presale() {
       if (Number(bal) <= Number(quantity) * Number(price)) {
         return toast.error("Insufficient Funds");
       }
-
+      setLoading(true);
       const buyTokens = await presaleContract.purchaseTokens(
         convertQuantity.toString(),
         {
@@ -180,11 +180,11 @@ export default function Presale() {
       );
       const result = await buyTokens.wait();
       console.log(result);
-      setLoading(true);
+      setLoading(false);
       return toast.success("Successfuly Transfered");
     } catch (error) {
       console.log(error);
-      setLoading(true);
+      setLoading(false);
       return toast.error("Transfered Failed");
     }
   };
@@ -249,7 +249,7 @@ export default function Presale() {
     tokenPrice();
     purchasedTokens();
     getBalance();
-    getquery();
+    // getquery();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [address]);
 
