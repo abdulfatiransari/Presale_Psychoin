@@ -4,7 +4,7 @@ import React from "react";
 
 const Graph = () => {
   return (
-    <div className="flex justify-center items-center w-full px-28 max-sm:px-10 max-md:px-10 ">
+    <div className="flex justify-center items-center w-full px-28 max-sm:px-10 max-md:px-10 mt-10">
        <div className="flex flex-col w-full">
         <div
           className="rounded-t-[30px] border-t-1 border-t-gray-300 px-28 py-10 max-sm:py-2 max-md:py-6 max-sm:px-6 max-md:px-6 flex justify-center items-center gap-6"

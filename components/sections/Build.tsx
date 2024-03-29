@@ -20,7 +20,7 @@ const Build = () => {
          Access Therapeutic Resources
          </h3>
          <p className="text-[18px] text-[#CDCDCD] leading-[28.8px] mb-4 max-md:text-[18px] max-sm:text-[16px]">
-         Utilize Psychoin to break barriers to mental health services. From therapy to educational materials, embark on a holistic well-being journey supported by our ecosystem.
+         Utilize Psychoin to break barriers to mental health services. Embark on a holistic well-being journey with a range of therapeutic tools and educational materials crafted by field experts. Within our supportive ecosystem, we honor each individual's unique path and pace toward personal development.
          </p>
          <div className="flex justify-start items-center mt-6">
          <Button className="font-semibold text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">

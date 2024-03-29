@@ -2,14 +2,6 @@ import { Button, Progress, Tab, Tabs } from "@nextui-org/react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import Timer from "./presaleSections/Timer";
-import SlidingCompanies from "./presaleSections/Companies";
-import BotSections from "./presaleSections/BotSection";
-import Token from "./presaleSections/Token";
-import Graph from "./presaleSections/Graph";
-import Team from "./presaleSections/OurTeam";
-import RoadMap from "./presaleSections/RoadMap";
-import FAQ from "./presaleSections/FAQ";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { ethers } from "ethers";
@@ -315,7 +307,7 @@ export default function Presale() {
                   variant="underlined"
                   classNames={{
                     tabList:
-                      "w-full relative rounded-none p-0 border-b border-divider gap-[160px]",
+                      "w-full relative rounded-none p-0 border-b border-divider gap-[100px]",
                     cursor: "w-full bg-white",
                     tab: "max-w-fit px-0 h-10",
                     tabContent: "group-data-[selected=true]:text-[#06b6d4]",
@@ -551,31 +543,6 @@ export default function Presale() {
           </div>
         </div>
       </div>
-      <Timer />
-      <h1 className="text-center text-white text-[20px] my-10 font-semibold max-sm:px-8">
-        Supported by many companies around the world
-      </h1>
-      <Image
-        src={"/img/Line 2.png"}
-        alt="line"
-        width={0}
-        height={0}
-        className="w-full h-[1px] mt-10 mb-12"
-      />
-      <SlidingCompanies />
-      <Image
-        src={"/img/Line 2.png"}
-        alt="line"
-        width={0}
-        height={0}
-        className="w-full h-[1px] mb-10  mt-12"
-      />
-      <BotSections />
-      <Token />
-      <Graph />
-      <Team />
-      <RoadMap />
-      <FAQ />
     </div>
   );
 }

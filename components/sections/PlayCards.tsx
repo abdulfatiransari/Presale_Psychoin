@@ -16,7 +16,7 @@ const cardData = [
   {
     id: 3,
     buttonName: "Community Recognition and Rewards",
-    srcUrl: "/img/psychoinCoins.svg",
+    srcUrl: "/img/psyWallet.svg",
   },
 ];
 

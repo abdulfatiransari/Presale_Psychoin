@@ -24,11 +24,12 @@ export default function Header() {
   console.log(isMenuOpen)
 
   const menuItems = [
-    { home: "Home" },
+    { home: "Buy Now" },
     { about: "About" },
     { services: "Services" },
     { presale: "Presale" },
     { support: "Support" },
+    { support: "Socials" },
   ];
 
   const router = useRouter();
@@ -63,7 +64,7 @@ export default function Header() {
                   }}
                 className="text-base font-semibold text-[#CDCDCD] hover:text-white cursor-pointer"
               >
-                Home
+                Buy Now
               </div>
             </NavbarItem>
           </NavbarContent>
@@ -104,6 +105,16 @@ export default function Header() {
                 className="text-base font-semibold text-[#CDCDCD] hover:text-white cursor-pointer"
               >
                 Support
+              </div>
+            </NavbarItem>
+          </NavbarContent>
+          <NavbarContent className="hidden md:flex gap-4" justify="center">
+            <NavbarItem>
+              <div
+                onClick={() => router.push("/support")}
+                className="text-base font-semibold text-[#CDCDCD] hover:text-white cursor-pointer"
+              >
+                Socials
               </div>
             </NavbarItem>
           </NavbarContent>

@@ -12,7 +12,7 @@ const Community = () => {
         }}
       >
         <Image
-          src={"/img/growth.gif"}
+          src={"/img/communityGif.gif"}
           className="w-[383px] h-[517px]"
           width={100}
           height={100}
@@ -34,17 +34,16 @@ const Community = () => {
             Where Communities Come To Life
           </h3>
           <p className="text-[18px] text-[#CDCDCD] leading-[28.8px] mb-4 max-md:text-[18px] max-sm:text-[16px]">
-            A community over 120k strong is stepping into a new era of mental
-            well-being.
+          Join a vibrant community on a collective quest to make well-being 
+          accessible to all.
           </p>
           <p className="text-[18px] text-[#CDCDCD] leading-[28.8px] mb-4">
-            Your achievements in personal growth are recognized and rewarded
-            with PSYCHOIN TOKEN, laying the foundation for a healthier, happier
-            world.
+          With Psychoin token fueling our journey, every step you 
+          take in personal growth is met with celebration 
+          and rewards.
           </p>
           <p className="text-[18px] text-[#CDCDCD] leading-[28.8px]">
-            A dynamic community awaits, where your contributions shape our
-            collective future.
+          Join us in shaping our collective journey, one supportive gesture at a time.
           </p>
           <div className="flex justify-start items-center mt-6">
           <Button className="font-semibold text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">

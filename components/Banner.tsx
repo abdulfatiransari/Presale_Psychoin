@@ -11,6 +11,10 @@ import OwnWorld from "./sections/OwnWorld";
 import Investors from "./sections/Investors";
 import Players from "./sections/Players";
 import Contact from "./sections/Contact";
+import Timer from "./presaleSections/Timer";
+import Presale from "./Presale";
+import Graph from "./presaleSections/Graph";
+import Team from "./presaleSections/OurTeam";
 
 export default function Banner() {
   return (
@@ -58,6 +62,8 @@ export default function Banner() {
         </div>
       </div>
     </div>
+    <Timer/>
+    <Presale/>
     <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mt-10"/>
     <SlidingText/>
     <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mb-10"/>
@@ -67,10 +73,11 @@ export default function Banner() {
     <Earn/>
     <Build/>
     <OwnWorld/>
+    <Graph/>
     <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mt-10"/>
     <SlidingText/>
     <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mb-10"/>
-    <Investors/>
+    <Team/>
     <Contact/>
     </div>
   );

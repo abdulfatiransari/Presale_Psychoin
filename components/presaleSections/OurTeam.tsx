@@ -5,23 +5,19 @@ import React from "react";
 const cardData = [
   {
     id: 0,
-    memeber: "Member 1",
+    member: "CEO D. Usmanov",
     designation: "Chief Executive Officer",
-    srcUrl: "/img/teamMember1.svg",
+    srcUrl: "/img/CEO.svg",
+    info: "D. Usmanov stands as a Visionary Investor and influential figure within the Financial realm, fervently envisioning the transformation of Well-being through Digital Currency and Pioneering Advancements in mental wellness innovation."
   },
   {
     id: 1,
-    memeber: "Member 2",
+    member: "Alex",
     designation: "Chief Technology Officer",
-    srcUrl: "/img/teamMember2.svg",
-  },
-  {
-    id: 2,
-    memeber: "Member 3",
-    designation: "Chief Executive Officer",
-    srcUrl: "/img/teamMember3.svg",
-  },
-];
+    srcUrl: "/img/doctor.svg",
+    info: "As the Leading Scientific Consultant and Head of the Scientific team behind Psychoin, Alex Malioukis, a seasoned Cognitive Neuroscientist and Clinical Neuropsychologist, ensures that the vision behind Psychoin adheres to scientific criteria and safeguards the well-being of the Community."
+  }
+];  
 
 const Team = () => {
   return (
@@ -62,39 +58,39 @@ const Team = () => {
           </p>
         </div>
       </div>
-      <div className="mt-10 flex justify-center items-center gap-6 max-md:flex-wrap max-sm:flex-wrap">
-        {cardData.map((card, idx) => (
-          <div key={idx}
-            className="rounded-[30px] "
-            style={{
-              backgroundColor:
-                "background: linear-gradient(0deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)),radial-gradient(54.52% 54.52% at 50% 0%, rgba(131, 172, 240, 0.2) 0.27%, rgba(131, 172, 240, 0) 100%)",
-            }}
-          >
-            <div key={card.id} className="w-full flex flex-col">
+      <div className="mt-10 flex items-stretch gap-20 max-md:flex-wrap max-sm:flex-wrap">
+  {cardData.map((card, idx) => (
+    <div key={idx} className="rounded-[30px] w-full flex flex-col">
+      <div
+        className="w-full flex flex-col"
+        style={{
+          backgroundColor:
+            "background: linear-gradient(0deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)),radial-gradient(54.52% 54.52% at 50% 0%, rgba(131, 172, 240, 0.2) 0.27%, rgba(131, 172, 240, 0) 100%)",
+        }}
+      >
+        <Image
+          src={card.srcUrl}
+          className="w-full h-full mb-4"
+          width={100}
+          height={100}
+          alt="member"
+        />
 
-            <Image
-              src={card.srcUrl}
-              className="w-full h-full mb-4"
-              width={100}
-              height={100}
-              alt="member"
-            />
-            
-            <h4 className="text-[32px] max-sm:text-[28px]">{card.memeber}</h4>
-            <Image
-            src={"/img/Line 8.png"}
-            alt="line"
-            width={0}
-            height={0}
-            className="w-full h-[1px] my-2"
-          />
-            <p className="text-[18px] text-[#CDCDCD]">{card.designation}</p>
-            </div>
-
-          </div>
-        ))}
+        <h4 className="text-[32px] max-sm:text-[28px]">{card.member}</h4>
+        <Image
+          src={"/img/Line 8.png"}
+          alt="line"
+          width={0}
+          height={0}
+          className="w-full h-[1px] my-2"
+        />
+        <p className="text-[18px] text-[#CDCDCD] ">{card.designation}</p>
+        <p className="text-[16px] text-[#CDCDCD] flex-grow">{card.info}</p>
       </div>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 };
