@@ -31,7 +31,7 @@ export default function PresaleFunc() {
 
     const router = useRouter();
 
-    const presaleAddress = "0x455f9DD747F1e1DA8Bc9c0842a8C11A2cB7045C9";
+    const presaleAddress = "0xC1E05ccDb22b44a1DC66Ff781D83C6D001385245";
 
     let clientSecret = "";
 
