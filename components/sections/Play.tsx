@@ -4,7 +4,7 @@ import React from "react";
 
 const Play = () => {
   return (
-    <div className="flex px-28 max-md:px-8 gap-4 mt-20 max-md:flex-col max-md:flex-wrap max-sm:flex-wrap max-lg:flex-wrap justify-center" >
+    <div id="services" className="flex px-28 max-md:px-8 gap-4 mt-20 max-md:flex-col max-md:flex-wrap max-sm:flex-wrap max-lg:flex-wrap justify-center" >
        <div className="flex justify-center items-center">
         <div className="flex flex-col w-[532px] max-sm:w-full max-md:w-full">
           <div className="flex gap-2">

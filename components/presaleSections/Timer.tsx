@@ -40,10 +40,10 @@ const Timer = () => {
     }, [address]);
 
     return (
-        <div className="flex flex-col justify-center items-center w-full mt-6 bg-[#6d00ccac] py-10 px-28 max-md:px-8 max-sm:px-8">
+        <div className="flex flex-col justify-center items-center w-full mt-6 bg-[#6d00ccac] py-10 px-28 max-md:px-8 max-sm:px-6">
             <h4 className="text-[20px] font-semibold text-white">PRESALE TOKEN END TIME</h4>
             <div className="flex justify-around w-full  items-center">
-                <div className="flex flex-col ">
+                <div className="flex flex-col">
                     <h1 className="text-[56px] text-white font-semibold max-sm:text-[24px]">
                         {currentDate ? currentDate.day : 0} d
                     </h1>

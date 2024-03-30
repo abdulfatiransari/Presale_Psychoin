@@ -4,7 +4,7 @@ import React from "react";
 
 const Community = () => {
   return (
-    <div className="flex px-28 max-md:px-8 gap-10 mt-20 max-md:flex-col max-lg:flex-wrap max-md:flex-wrap max-sm:flex-wrap justify-center" >
+    <div id="about" className="flex px-28 max-md:px-8 gap-10 mt-20 max-md:flex-col max-lg:flex-wrap max-md:flex-wrap max-sm:flex-wrap justify-center" >
       <div 
         className="rounded-t-[30px] px-6 py-4 max-sm:px-6 max-sm:py-6 flex justify-center items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 w-[538px] h-[620px] max-md:w-full max-md:h-full max-sm:w-full max-sm:h-full max-xl1:w-full max-lg1:w-full max-md1:w-full"
         style={{

@@ -9,6 +9,7 @@ import { RiFacebookFill, RiLinkedinFill } from "react-icons/ri";
 export default function Footer() {
   return (
     <div
+      id="socials"
       className="w-full rounded-t-[30px] py-10 px-28  max-sm:px-6"
       style={{
         background:

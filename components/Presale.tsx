@@ -247,7 +247,7 @@ export default function Presale() {
   }, [address]);
 
   return (
-    <div>
+    <div id="presale">
       <div
         className="flex flex-col max-w-full px-28 py-10 max-md:px-8 max-sm:px-8"
         style={{
@@ -271,12 +271,12 @@ export default function Presale() {
                 className="cursor-pointer"
               />
             </div>
-            <div className="flex justify-center items-center gap-6 px-16 max-md:px-8 pb-6">
-              <p className="text-[20px] ">
+            <div className="flex justify-center items-center gap-6 px-16 max-md:px-8 max-sm:px-4 pb-6">
+              <p className="text-[20px] max-sm:text-[16px]">
                 Invite your Friends and receive 5% Bonus!
               </p>
               <Button
-                className="font-semibold flex text-white rounded-[100px] px-8 py-6 text-base"
+                className="font-semibold flex text-white rounded-[100px] px-8 py-6 max-sm:py-4 text-base"
                 style={{
                   background:
                     "linear-gradient(90deg, rgba(145, 173, 186, 0.8) -11.36%, rgba(32, 81, 102, 0.096) 104.55%)",

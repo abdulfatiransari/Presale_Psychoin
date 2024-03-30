@@ -12,7 +12,7 @@ const cardData = [
   },
   {
     id: 1,
-    member: "Alex",
+    member: "A. Malioukis",
     designation: "Chief Technology Officer",
     srcUrl: "/img/doctor.svg",
     info: "As the Leading Scientific Consultant and Head of the Scientific team behind Psychoin, Alex Malioukis, a seasoned Cognitive Neuroscientist and Clinical Neuropsychologist, ensures that the vision behind Psychoin adheres to scientific criteria and safeguards the well-being of the Community."
@@ -21,7 +21,7 @@ const cardData = [
 
 const Team = () => {
   return (
-    <div className="flex flex-col w-full px-28 py-10 gap-2 max-sm:px-8 max-md:px-10">
+    <div id="team" className="flex flex-col w-full px-28 py-10 gap-2 max-sm:px-8 max-md:px-10">
       <div className="flex justify-between items-center max-sm:flex-wrap">
         <div className="flex flex-col">
           <p className="text-[18px]  max-sm:text-[14px] text-[#CDCDCD] font-semibold mb-1">
