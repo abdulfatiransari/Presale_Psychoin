@@ -18,10 +18,10 @@ export default function Footer() {
     >
       <div className="flex justify-between items-center max-md:flex-wrap ">
         <div className="flex flex-col w-[560px]">
-          <h4 className="font-semibold text-xl">Subscribe to Newsletter</h4>
+          <h4 className="font-semibold text-xl">Join Us</h4>
           <p className="text-[#CDCDCD] text-base mt-4">
-            Aliquet dignissim erat habitasse aliquet tincidunt phasellus
-            ultrices. Aenean sed elit mattis sagittis id velit sed scelerisque.
+          Join a vibrant community on a collective quest to make well-being 
+          accessible to all.
           </p>
         </div>
         <div className="flex gap-4 items-center w-[#495px] max-sm: mt-6">
@@ -47,9 +47,7 @@ export default function Footer() {
         <div className="flex flex-col w-[331px] ">
           <h4 className="font-semibold text-2xl">Psychoin</h4>
           <p className="text-[#CDCDCD] text-base mt-4">
-            Euismod libero faucibus egestas elementum scelerisque porta commodo
-            purus nam. Ante ac egestas duis.
-          </p>
+          Dive into Self-Harbor, where the latest neuroscience and psychology empower a community dedicated to democratizing well-being.          </p>
             <div className="flex gap-4 mt-4">
             <Link href={'#'}>
                 <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">

@@ -5,7 +5,7 @@ import React from "react";
 const cardData = [
   {
     id: 0,
-    member: "CEO D. Usmanov",
+    member: "D. Usmanov",
     designation: "Chief Executive Officer",
     srcUrl: "/img/CEO.svg",
     info: "D. Usmanov stands as a Visionary Investor and influential figure within the Financial realm, fervently envisioning the transformation of Well-being through Digital Currency and Pioneering Advancements in mental wellness innovation."
@@ -14,7 +14,7 @@ const cardData = [
     id: 1,
     member: "A. Malioukis",
     designation: "Chief Technology Officer",
-    srcUrl: "/img/doctor.svg",
+    srcUrl: "/img/alexNewImage.svg",
     info: "As the Leading Scientific Consultant and Head of the Scientific team behind Psychoin, Alex Malioukis, a seasoned Cognitive Neuroscientist and Clinical Neuropsychologist, ensures that the vision behind Psychoin adheres to scientific criteria and safeguards the well-being of the Community."
   }
 ];  
@@ -76,7 +76,7 @@ const Team = () => {
           alt="member"
         />
 
-        <h4 className="text-[32px] max-sm:text-[28px]">{card.member}</h4>
+        <h4 className="text-[32px] max-sm:text-[28px] font-semibold">{card.member}</h4>
         <Image
           src={"/img/Line 8.png"}
           alt="line"
@@ -84,7 +84,7 @@ const Team = () => {
           height={0}
           className="w-full h-[1px] my-2"
         />
-        <p className="text-[18px] text-[#CDCDCD] ">{card.designation}</p>
+        <p className="text-[18px] text-white font-semibold mb-2">{card.designation}</p>
         <p className="text-[16px] text-[#CDCDCD] flex-grow">{card.info}</p>
       </div>
     </div>
