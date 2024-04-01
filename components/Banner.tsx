@@ -64,7 +64,7 @@ export default function Banner() {
     </div>
     <Timer/>
     <Presale/>
-    <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mt-10"/>
+    <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px]"/>
     <SlidingText/>
     <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mb-10"/>
     <Community/>

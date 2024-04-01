@@ -208,7 +208,7 @@ export default function Presale() {
             <div
                 className="flex flex-col max-w-full px-28 pt-10 pb-24 max-md:px-8 max-sm:px-8"
                 style={{
-                    backgroundImage: 'url("/img/presaleBanner.svg")',
+                    backgroundImage: 'url("/img/presale.gif")',
                     backgroundRepeat: "no-repeat",
                 }}
             >
