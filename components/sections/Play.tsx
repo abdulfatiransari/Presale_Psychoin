@@ -37,7 +37,7 @@ const Play = () => {
       >
         <Image
           src={"/img/brain.gif"}
-          className="w-[383px] h-[517px]"
+          className="w-[383px] h-[517px] max-sm:h-[360px] max-md:h-[400px] max-lg:h-[450px]"
           width={100}
           height={100}
           alt="coin"

@@ -274,7 +274,7 @@ export default function Presale() {
                                                 className="flex items-center space-x-2"
                                                 onClick={() => setKeys("crypto")}
                                             >
-                                                <span className="text-[16px] font-bold text-[#6D00CC] cursor-pointer">
+                                                <span className={`text-[16px] font-bold ${keys === "crypto" ? "text-[#6D00CC]" : "text-[#CDCDCD]"} cursor-pointer`}>
                                                     Buy Crypto
                                                 </span>
                                             </div>
@@ -287,7 +287,7 @@ export default function Presale() {
                                                 className="flex items-center space-x-2"
                                                 onClick={() => setKeys("fiat")}
                                             >
-                                                <span className="text-[16px] font-bold text-[#CDCDCD] cursor-pointer">
+                                                <span className={`text-[16px] font-bold ${keys === "fiat" ? "text-[#6D00CC]" : "text-[#CDCDCD]"} cursor-pointer`}>
                                                     Buy Fiat
                                                 </span>
                                             </div>

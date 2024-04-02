@@ -17,7 +17,7 @@ const Build = () => {
            <p className="font-bold text-[18px] text-white">PSYCHOIN</p>
          </div>
          <h3 className="text-[48px] font-semibold text-[#6D00CC] leading-[55px] mb-6 max-md:text-[32px] max-sm:text-[28px] max-sm:leading-10 max-md:leading-10">
-         Access Therapeutic Resources
+         Access Psychoeducational Resources
          </h3>
          <p className="text-[18px] text-[#CDCDCD] leading-[28.8px] mb-4 max-md:text-[18px] max-sm:text-[16px]">
          Utilize Psychoin to break barriers to mental health services. Embark on a holistic well-being journey with a range of therapeutic tools and educational materials crafted by field experts. Within our supportive ecosystem, we honor each individual's unique path and pace toward personal development.
@@ -37,7 +37,7 @@ const Build = () => {
       >
         <Image
           src={"/img/mentalHealth.gif"}
-          className="w-[383px] h-[517px]"
+          className="w-[383px] h-[517px] max-sm:h-[360px] max-md:h-[400px] max-lg:h-[450px]"
           width={100}
           height={100}
           alt="coin"

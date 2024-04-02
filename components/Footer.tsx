@@ -18,10 +18,9 @@ export default function Footer() {
     >
       <div className="flex justify-between items-center max-md:flex-wrap ">
         <div className="flex flex-col w-[560px]">
-          <h4 className="font-semibold text-xl">Join Us</h4>
+          <h4 className="font-semibold text-xl">Subscribe to Newsletter</h4>
           <p className="text-[#CDCDCD] text-base mt-4">
-          Join a vibrant community on a collective quest to make well-being 
-          accessible to all.
+          Stay connected with the latest in mental health, community achievements, and Psychoin updates. Join us in spreading well-being and empowerment.
           </p>
         </div>
         <div className="flex gap-4 items-center w-[#495px] max-sm: mt-6">
@@ -46,8 +45,9 @@ export default function Footer() {
       <div className="mt-14 w-full flex justify-between items-center flex-wrap">
         <div className="flex flex-col w-[331px] ">
           <h4 className="font-semibold text-2xl">Psychoin</h4>
-          <p className="text-[#CDCDCD] text-base mt-4">
-          Dive into Self-Harbor, where the latest neuroscience and psychology empower a community dedicated to democratizing well-being.          </p>
+          <p className="text-[rgb(205,205,205)] text-base mt-4">
+          We're backed by a network of partners and investors who believe in our vision. Together, we're making mental health accessible and rewarding for our global community.
+          </p>
             <div className="flex gap-4 mt-4">
             <Link href={'#'}>
                 <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
