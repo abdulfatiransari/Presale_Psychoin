@@ -5,7 +5,7 @@ import React from "react";
 const cardData = [
   {
     id: 1,
-    buttonName: "Empowerment through Neuroscience",
+    buttonName: "Unlock New Possibilities via Psychology",
     srcUrl: "/img/neuroscience.svg",
   },
   {
@@ -15,7 +15,7 @@ const cardData = [
   },
   {
     id: 3,
-    buttonName: "Community Recognition and Rewards",
+    buttonName: "Join a Supportive and Rewarding Community",
     srcUrl: "/img/psyWallet.svg",
   },
 ];

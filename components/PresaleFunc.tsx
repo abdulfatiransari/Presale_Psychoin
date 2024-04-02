@@ -117,7 +117,8 @@ export default function PresaleFunc() {
     const buyToken = async () => {
         try {
             if (!walletProvider) {
-                throw new Error("Wallet provider not available");
+                toast.error("Wallet provider not available");
+                return;
             }
             const ethersProvider = new ethers.providers.Web3Provider(walletProvider);
             const signer = ethersProvider.getSigner();

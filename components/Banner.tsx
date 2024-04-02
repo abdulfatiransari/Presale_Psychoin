@@ -31,7 +31,7 @@ export default function Banner() {
         A Revolutionary Approach to Well-being
         </h3>
         <p className="text-[24px] text-[#CDCDCD] mt-4 leading-[38.4px] max-md:text-[20px] max-sm:text-[18px] max-md:leading-8 max-sm:leading-8">
-        Dive into Self-Harbor, where the latest neuroscience and psychology empower a community dedicated to democratizing well-being. With Psychoin token at its core, unlock a new dimension of mental health and personal development.
+        Embark on a journey into a community driven by the latest discoveries in neuroscience and psychology, dedicated to democratizing well-being. With Psychoin token at its core, unlock a new dimension of mental health and personal development.
         </p>
         <div className="flex gap-4 mt-4">
           <Button
