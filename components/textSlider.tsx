@@ -8,7 +8,7 @@ const SlidingText = () => {
         <p className="px-10">Discord community of over 120k</p>
         <p className="px-10">A new world is waiting</p>
         <p className="px-10">What you build is yours to own</p>
-        <p className="px-10">Psychoin token coming soon</p>
+        <p className="px-10 uppercase">Psychoin token coming soon</p>
       </Marquee>
     </div>
   );

@@ -17,10 +17,10 @@ export default function Footer() {
       }}
     >
       <div className="flex justify-between items-center max-md:flex-wrap ">
-        <div className="flex flex-col w-[560px]">
+        <div className="flex flex-col w-[515px]">
           <h4 className="font-semibold text-xl">Subscribe to Newsletter</h4>
           <p className="text-[#CDCDCD] text-base mt-4">
-          Stay connected with the latest in mental health, community achievements, and Psychoin updates. Join us in spreading well-being and empowerment.
+            Stay connected with the latest in mental health, community achievements, and Psychoin updates. Join us in spreading well-being and empowerment.
           </p>
         </div>
         <div className="flex gap-4 items-center w-[#495px] max-sm: mt-6">
@@ -40,63 +40,62 @@ export default function Footer() {
         </div>
       </div>
 
-      <Image src={"/img/Line 2.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mt-16 mb-18"/>
-      
-      <div className="mt-14 w-full flex justify-between items-center flex-wrap">
-        <div className="flex flex-col w-[331px] ">
-          <h4 className="font-semibold text-2xl">Psychoin</h4>
-          <p className="text-[rgb(205,205,205)] text-base mt-4">
-          We're backed by a network of partners and investors who believe in our vision. Together, we're making mental health accessible and rewarding for our global community.
-          </p>
-            <div className="flex gap-4 mt-4">
-            <Link href={'#'}>
-                <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
-                <RiFacebookFill className="text-white"/>
-                </div>
-              </Link>
-              <Link href={'#'}>
-                <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
-                <FaTwitter className="text-white"/>
-                </div>
-              </Link>
-              <Link href={'#'}>
-                <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
-                <RiLinkedinFill className="text-white"/>
-                </div>
-              </Link>
-              <Link href={'#'}>
-                <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
-                <AiFillInstagram className="text-white"/>
-                </div>
-              </Link>
-            </div>
-          </div>
+      <Image src={"/img/Line 2.png"} alt="line" width={0} height={0} className="w-full h-[1px] mt-16 mb-18" />
 
-          <div className="flex gap-16 flex-wrap max-sm:mt-6">
-            <div className="flex flex-col gap-2">
-                <h5 className="font-semibold text-[24px]">Company</h5>
-                <p className="text-base text-[#CDCDCD]">Home</p>
-                <p className="text-base text-[#CDCDCD]">About us</p>
-                <p className="text-base text-[#CDCDCD]">Services</p>
-                <p className="text-base text-[#CDCDCD]">Careers</p>
-            </div>
-            <div className="flex flex-col gap-2">
-                <h5 className="font-semibold text-[24px]">Resources</h5>
-                <p className="text-base text-[#CDCDCD]">Community</p>
-                <p className="text-base text-[#CDCDCD]">Video Tutorials</p>
-                <p className="text-base text-[#CDCDCD]">API Documentation</p>
-                <p className="text-base text-[#CDCDCD]">Security Reports</p>
-            </div>
-            <div className="flex flex-col gap-2">
-                <h5 className="font-semibold text-[24px]">Help</h5>
-                <p className="text-base text-[#CDCDCD]">Customer Support</p>
-                <p className="text-base text-[#CDCDCD]">Terms & Conditions</p>
-                <p className="text-base text-[#CDCDCD]">Privacy Policy</p>
-            </div>
+      <div className="mt-14 w-full flex justify-between items-center flex-wrap  ">
+        <div className="flex flex-col md:w-[331px] ">
+          <h4 className="font-semibold text-2xl">Psychoin</h4>
+          <p className="text-[rgb(205,205,205)] text-base mt-4  pr-6 md:p-0 ">
+            We're backed by a network of partners and investors who believe in our vision. Together, we're making mental health accessible and rewarding for our global community.          </p>
+          <div className="flex gap-4 mt-4">
+            <Link href={'#'}>
+              <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
+                <RiFacebookFill className="text-white" />
+              </div>
+            </Link>
+            <Link href={'#'}>
+              <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
+                <FaTwitter className="text-white" />
+              </div>
+            </Link>
+            <Link href={'#'}>
+              <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
+                <RiLinkedinFill className="text-white" />
+              </div>
+            </Link>
+            <Link href={'#'}>
+              <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
+                <AiFillInstagram className="text-white" />
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex gap-x-[120px] gap-y-[50px]  md:gap-16 flex-wrap max-sm:mt-6">
+          <div className="flex flex-col gap-2">
+            <h5 className="font-semibold text-[24px]">Company</h5>
+            <p className="text-base text-[#CDCDCD]">Home</p>
+            <p className="text-base text-[#CDCDCD]">About us</p>
+            <p className="text-base text-[#CDCDCD]">Services</p>
+            <p className="text-base text-[#CDCDCD]">Careers</p>
+          </div>
+          <div className="flex flex-col gap-2 ">
+            <h5 className="font-semibold text-[24px]">Resources</h5>
+            <p className="text-base text-[#CDCDCD]">Community</p>
+            <p className="text-base text-[#CDCDCD]">Video Tutorials</p>
+            <p className="text-base text-[#CDCDCD]">API Documentation</p>
+            <p className="text-base text-[#CDCDCD]">Security Reports</p>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h5 className="font-semibold text-[24px]">Help</h5>
+            <p className="text-base text-[#CDCDCD]">Customer Support</p>
+            <p className="text-base text-[#CDCDCD]">Terms & Conditions</p>
+            <p className="text-base text-[#CDCDCD]">Privacy Policy</p>
+          </div>
 
         </div>
       </div>
-      <Image src={"/img/Line 8.png"} alt="line" width={0} height={0}  className="w-full h-[1px] mt-10 mb-6"/>
+      <Image src={"/img/Line 8.png"} alt="line" width={0} height={0} className="w-full h-[1px] mt-10 mb-6" />
       <p className="text-white text-center mt-6">Copyright © 2024 Psychoin</p>
     </div>
   );

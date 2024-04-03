@@ -20,13 +20,13 @@ export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
 
   const menuItems = [
-    { id: "presale", label: "Buy Now" },
-    { id: "about", label: "About" },
-    { id: "services", label: "Services" },
-    { id: "whitepaper", label: "Whitepaper" },
-    { id: "team", label: "Team" },
-    { id: "support", label: "Support" },
-    { id: "socials", label: "Socials" },
+    { id: "#presale", label: "Buy Now" },
+    { id: "#about", label: "About" },
+    { id: "#services", label: "Services" },
+    { id: "/pdf/whitepaper.pdf", label: "Whitepaper", newTab: true },
+    { id: "#team", label: "Team" },
+    { id: "#support", label: "Support" },
+    { id: "#socials", label: "Socials" },
   ];
 
   const router = useRouter();
@@ -45,9 +45,8 @@ export default function Header() {
 
   return (
     <div
-      className={`bg-transparent flex flex-col w-full ${
-        isSticky ? "fixed z-[9999] transition" : ""
-      }`}
+      className={`bg-transparent flex flex-col w-full ${isSticky ? "fixed z-[9999] transition" : ""
+        }`}
     >
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
@@ -73,7 +72,7 @@ export default function Header() {
           {menuItems.map((item) => (
             <NavbarItem key={item.id}>
               <div className="text-base font-semibold text-[#CDCDCD] hover:text-white cursor-pointer">
-                <a href={`#${item.id}`}>{item.label}</a>
+                <a href={`${item.id}`} target={item.newTab ? "_blank" : "_self"} >{item.label}</a>
               </div>
             </NavbarItem>
           ))}
@@ -82,7 +81,7 @@ export default function Header() {
           <NavbarItem>
             <Button
               onClick={() => open()}
-              className="font-semibold flex text-white rounded-[100px] px-8 max-sm:px-4 max-sm:py-2 py-6 text-base"
+              className="font-semibold -mr-4 flex text-white rounded-[100px] px-8 max-sm:px-4 max-sm:py-2 py-6 text-base"
               style={{
                 background:
                   "linear-gradient(90deg, rgba(145, 173, 186, 0.8) -11.36%, rgba(32, 81, 102, 0.096) 104.55%)",
@@ -102,7 +101,7 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                     className="text-xl font-semibold text-[#CDCDCD] mb-6 hover:text-white cursor-pointer"
                   >
-                    <a href={`#${item.id}`}>{item.label}</a>
+                    <a href={`${item.id}`} target={item.newTab ? "_blank" : "_self"}>{item.label}</a>
                   </div>
                 </div>
               </NavbarMenuItem>

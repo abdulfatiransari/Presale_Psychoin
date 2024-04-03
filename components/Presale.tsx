@@ -246,11 +246,11 @@ export default function Presale() {
                 </div>
                 <div className="flex justify-end items-center max-sm:items-center max-sm:justify-center">
                     <div className="flex flex-col">
-                        <h1 className="w-[400px] max-sm:max-w-[250px] text-[48px] max-sm:text-[36px] text-white font-semibold">
+                        <h1 className="w-[400px] max-sm:max-w-[250px] text-[48px] mb-5 max-sm:text-[36px] text-white font-semibold">
                             Self-Custodial Trading Bot
                         </h1>
                         <div
-                            className="rounded-t-[30px] px-6 py-4 flex flex-col border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 w-full"
+                            className="rounded-t-[30px] px-6 py-4  mt-5 flex flex-col border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 w-full"
                             style={{
                                 background: "radial-gradient(at center top, #222833, #0C0C0C)",
                             }}
@@ -308,9 +308,8 @@ export default function Presale() {
                                 <>
                                     <p className="text-[20px] font-semibold mb-3">
                                         {tokensRemains && presaleTotalToken
-                                            ? `${
-                                                  Number(presaleTotalToken) - Number(tokensRemains)
-                                              } / ${presaleTotalToken} TOKEN`
+                                            ? `${Number(presaleTotalToken) - Number(tokensRemains)
+                                            } / ${presaleTotalToken} TOKEN`
                                             : `0 / TOKEN`}
                                     </p>
                                     {/* <p className="text-[16px] text-[#CDCDCD] mb-4">
@@ -321,9 +320,8 @@ export default function Presale() {
                                 <>
                                     <p className="text-[20px] font-semibold mb-3">
                                         {tokensRemains && presaleTotalToken
-                                            ? `${
-                                                  Number(presaleTotalToken) - Number(tokensRemains)
-                                              } / ${presaleTotalToken} TOKEN`
+                                            ? `${Number(presaleTotalToken) - Number(tokensRemains)
+                                            } / ${presaleTotalToken} TOKEN`
                                             : `0 / TOKEN`}
                                     </p>
                                     {/* <div className="flex justify-between">
@@ -395,9 +393,9 @@ export default function Presale() {
                                 <span className="text-[24px] font-semibold ">
                                     {address
                                         ? `${address?.slice(0, 6)}...${address?.slice(
-                                              address?.length - 6,
-                                              address?.length
-                                          )}`
+                                            address?.length - 6,
+                                            address?.length
+                                        )}`
                                         : "0x"}
                                 </span>
                             </div>

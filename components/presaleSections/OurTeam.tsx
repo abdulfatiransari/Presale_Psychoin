@@ -30,7 +30,7 @@ const cardData = [
   {
     id: 1,
     member: "A. Malioukis",
-    designation: "Chief Technology Officer",
+    designation: "Chief Scientific Advisor",
     srcUrl: "/img/alexNewImage.svg",
     info: "As the Leading Scientific Consultant and Head of the Scientific team behind Psychoin, Alex Malioukis, a seasoned Cognitive Neuroscientist and Clinical Neuropsychologist, ensures that the vision behind Psychoin adheres to scientific criteria and safeguards the well-being of the Community.",
   },
@@ -40,9 +40,9 @@ const Team = () => {
   return (
     <div
       id="team"
-      className="flex flex-col w-full px-28 py-10 gap-2 max-sm:px-8 max-md:px-10"
+      className="flex flex-col w-full px-28 md:py-10 md:gap-2 max-sm:px-8 max-md:px-10"
     >
-      <div className="flex justify-between items-center max-sm:flex-wrap">
+      <div className="flex justify-between  items-center  max-sm:flex-wrap ">
         <div className="flex flex-col">
           <p className="text-[18px]  max-sm:text-[14px] text-[#CDCDCD] font-semibold mb-1">
             OUR TEAM
@@ -55,7 +55,7 @@ const Team = () => {
           See All Team
         </Button>
       </div>
-      <div className="flex items-stretch justify-between gap-16 mt-14 max-md:flex-wrap max-sm:flex-wrap">
+      <div className="flex items-stretch justify-between  gap-[3rem] md:gap-[7rem]  mt-14 max-md:flex-wrap max-sm:flex-wrap ">
         {mindsData.map((data, idx) => (
           <div
             key={idx}
@@ -68,11 +68,11 @@ const Team = () => {
           </div>
         ))}
       </div>
-      <div className="mt-10 px-28 max-sm:px-0 max-md:px-10 max-lg:px-16 flex items-stretch gap-20 max-md:flex-wrap max-sm:flex-wrap">
+      <div className="mt-10 px-28 max-sm:px-0   max-md:px-10 max-lg:px-16 flex items-stretch  max-md:flex-wrap max-sm:flex-wrap justify-center">
         {cardData.map((card, idx) => (
-          <div key={idx} className="rounded-[30px] w-full flex flex-col">
+          <div key={idx} className="rounded-[30px] w-full flex flex-col max-w-[400px] gap-6 mb-10 md:mb-10">
             <div
-              className="w-full flex flex-col"
+              className=" w-full  flex flex-col "
               style={{
                 backgroundColor:
                   "background: linear-gradient(0deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)),radial-gradient(54.52% 54.52% at 50% 0%, rgba(131, 172, 240, 0.2) 0.27%, rgba(131, 172, 240, 0) 100%)",
@@ -80,7 +80,7 @@ const Team = () => {
             >
               <Image
                 src={card.srcUrl}
-                className="w-full h-full mb-4"
+                className="w-[364px] h-full mb-4"
                 width={100}
                 height={100}
                 alt="member"
@@ -94,12 +94,12 @@ const Team = () => {
                 alt="line"
                 width={0}
                 height={0}
-                className="w-full h-[1px] my-2"
+                className="w-[350px] h-[1px] my-2"
               />
-              <p className="text-[18px] text-white font-semibold mb-2">
+              <p className="text-[18px] text-white font-semibold mb-2 max-w-[364px]">
                 {card.designation}
               </p>
-              <p className="text-[16px] text-[#CDCDCD] flex-grow">
+              <p className="text-[16px] text-[#CDCDCD] flex-grow max-w-[315px]">
                 {card.info}
               </p>
             </div>
