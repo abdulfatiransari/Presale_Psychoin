@@ -1,6 +1,7 @@
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import React from "react";
+import LazyImage from "../LazyImage";
 
 const cardData = [
   {
@@ -33,7 +34,7 @@ const PlayCards = () => {
             }}
           >
             <div className="flex justify-center items-center">
-              <Image
+            <LazyImage
                 src={card.srcUrl}
                 className="w-[353px] h-[246px] mb-6 max-sm:w-[300px] max-sm:h-[200px]"
                 width={100}

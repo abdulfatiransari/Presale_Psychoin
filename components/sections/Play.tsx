@@ -31,8 +31,8 @@ const Play = () => {
       </div>
 
       <div
-        className="  rounded-t-[30px] px-6 pt-6  md:pt-8 max-sm:px-6  border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1
-        flex justify-center items-center  w-[445px] h-[430px] max-md:w-full max-md:h-full max-sm:w-full max-sm:h-full max-xl1:w-full max-lg1:w-full max-md1:w-full"
+        className="rounded-t-[30px] px-6 pt-6  md:pt-8 max-sm:px-6  border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1
+        flex justify-center items-center w-[445px] h-[430px] max-md:w-full max-md:h-full max-sm:w-full max-sm:h-full max-xl1:w-full max-lg1:w-full max-md1:w-full"
         style={{
           background: "radial-gradient(at center top, #222833, #0C0C0C)",
         }}
