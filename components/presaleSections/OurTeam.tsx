@@ -40,7 +40,7 @@ const Team = () => {
   return (
     <div
       id="team"
-      className="flex flex-col w-full px-28 md:py-10 md:gap-2 max-sm:px-8 max-md:px-10"
+      className="flex flex-col w-full px-28 md:py-10 md:gap-2 max-sm:px-8 max-md:px-10 max-lg:px-10"
     >
       <div className="flex justify-between  items-center  max-sm:flex-wrap ">
         <div className="flex flex-col">
@@ -68,7 +68,7 @@ const Team = () => {
           </div>
         ))}
       </div>
-      <div className="mt-10 px-28 max-sm:px-0   max-md:px-10 max-lg:px-16 flex items-stretch  max-md:flex-wrap max-sm:flex-wrap justify-center">
+      <div className="mt-10 px-28 max-sm:px-0 max-md:px-10 max-lg:px-16 flex items-stretch  max-md:flex-wrap max-sm:flex-wrap  max-lg:flex-wrap max-xl:px-10 justify-center">
         {cardData.map((card, idx) => (
           <div key={idx} className="rounded-[30px] w-full flex flex-col max-w-[400px] gap-6 mb-10 md:mb-10">
             <div
