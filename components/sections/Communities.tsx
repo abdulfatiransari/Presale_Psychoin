@@ -33,7 +33,7 @@ const Community = () => {
         </div>
       </div>
 
-      <div id="services" className="flex flex-col lg:flex-row justify-center items-center gap-15 mt-20 lg:gap-20  w-full max-w-[1100px] mx-auto  " >
+      <div id="about" className="flex flex-col lg:flex-row justify-center items-center gap-15 mt-20 lg:gap-20  w-full max-w-[1100px] mx-auto  " >
         <div className="flex justify-center  items-center lg:mt-0  mt-6 md:max-w-[538px] w-full px-6  ">
           <div className="flex flex-col max-w-[430px] md:max-w-[536px] ">
             <div className="flex gap-2 ">
