@@ -1,12 +1,19 @@
+import { useState } from "react";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaTwitter } from "react-icons/fa";
-import { RiFacebookFill, RiLinkedinFill } from "react-icons/ri";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = () => {
+    // Handle subscription logic here (e.g., send email to server)
+    console.log("Subscribed with email:", email);
+    // Reset email input after subscription
+    setEmail("");
+  };
+
   return (
     <div
       id="socials"
@@ -25,11 +32,14 @@ export default function Footer() {
         </div>
         <div className="flex gap-4 items-center w-[#495px] max-sm: mt-6">
           <input
-            type="search"
+            type="email"
             placeholder="Enter your Email..."
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="bg-white text-black outline-none rounded-[100px] w-full h-10 px-6"
           />
           <Button
+            onClick={handleSubscribe}
             className="font-semibold flex text-white bg-transparent rounded-[100px] px-8 py-4 text-base"
             style={{
               border: "1px solid #FFFFFF",
@@ -42,55 +52,30 @@ export default function Footer() {
 
       <Image src={"/img/Line 2.png"} alt="line" width={0} height={0} className="w-full h-[1px] mt-16 mb-18" />
 
-      <div className="mt-14 w-full flex justify-between items-center flex-wrap  ">
+      <div className="mt-14 w-full flex justify-between items-center flex-wrap">
         <div className="flex flex-col md:w-[331px] ">
           <h4 className="font-semibold text-2xl">Psychoin</h4>
           <p className="text-[rgb(205,205,205)] text-base mt-4  pr-6 md:p-0 ">
             We're backed by a network of partners and investors who believe in our vision. Together, we're making mental health accessible and rewarding for our global community.          </p>
-          <div className="flex gap-4 mt-4">
-            <Link href={'#'}>
-              <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
-                <RiFacebookFill className="text-white" />
-              </div>
-            </Link>
-            <Link href={'#'}>
-              <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
-                <FaTwitter className="text-white" />
-              </div>
-            </Link>
-            <Link href={'#'}>
-              <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
-                <RiLinkedinFill className="text-white" />
-              </div>
-            </Link>
-            <Link href={'#'}>
-              <div className="flex justify-center items-center w-[32px] h-[32px] rounded-full bg-[#1A1D22]">
-                <AiFillInstagram className="text-white" />
-              </div>
-            </Link>
-          </div>
         </div>
 
         <div className="flex gap-x-[120px] gap-y-[50px]  md:gap-16 flex-wrap max-sm:mt-6">
           <div className="flex flex-col gap-2">
             <h5 className="font-semibold text-[24px]">Company</h5>
-            <p className="text-base text-[#CDCDCD]">Home</p>
-            <p className="text-base text-[#CDCDCD]">About us</p>
-            <p className="text-base text-[#CDCDCD]">Services</p>
-            <p className="text-base text-[#CDCDCD]">Careers</p>
+            <a href="#about" className="text-base text-[#CDCDCD] cursor-pointer">About</a>
+            <a href="#services" className="text-base text-[#CDCDCD] cursor-pointer">Services</a>
+            <a href="#team" className="text-base text-[#CDCDCD] cursor-pointer">Team</a>
           </div>
           <div className="flex flex-col gap-2 ">
             <h5 className="font-semibold text-[24px]">Resources</h5>
-            <p className="text-base text-[#CDCDCD]">Community</p>
-            <p className="text-base text-[#CDCDCD]">Video Tutorials</p>
-            <p className="text-base text-[#CDCDCD]">API Documentation</p>
-            <p className="text-base text-[#CDCDCD]">Security Reports</p>
+            <Link
+              href="https://www.instagram.com/psychoin_official?igsh=eDlqbHRyZ2VuMGRt"
+            className="text-base text-[#CDCDCD]">Community</Link>
+            <a href="/pdf/whitepaper.pdf" className="text-base text-[#CDCDCD]">Whitepaper</a>
           </div>
           <div className="flex flex-col gap-2">
             <h5 className="font-semibold text-[24px]">Help</h5>
-            <p className="text-base text-[#CDCDCD]">Customer Support</p>
-            <p className="text-base text-[#CDCDCD]">Terms & Conditions</p>
-            <p className="text-base text-[#CDCDCD]">Privacy Policy</p>
+            <Link href={'#support'} className="text-base text-[#CDCDCD] cursor-pointer">Support</Link>
           </div>
 
         </div>
