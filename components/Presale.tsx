@@ -212,9 +212,9 @@ export default function Presale() {
                     backgroundRepeat: "no-repeat",
                 }}
             >
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center ">
                     <div
-                        className="rounded-t-[30px] border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 bg-gradient-to-t "
+                        className="rounded-t-[30px]  border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 bg-gradient-to-t "
                         style={{
                             background: "radial-gradient(at center top, #222833, #0C0C0C)",
                         }}
@@ -228,10 +228,10 @@ export default function Presale() {
                                 className="cursor-pointer"
                             />
                         </div>
-                        <div className="flex justify-center items-center gap-6 px-16 max-md:px-8 max-sm:px-4 pb-6">
+                        <div className="flex justify-center items-center gap-6 px-16 max-md:px-8 max-sm:px-4 pb-6 mx-5  ">
                             <p className="text-[20px] max-sm:text-[16px]">Invite your Friends and receive 5% Bonus!</p>
                             <Button
-                                className="font-semibold flex text-white rounded-[100px] px-8 py-6 max-sm:py-4 text-base"
+                                className="font-semibold flex text-white rounded-[100px] px-8 py-6 mx-5 max-sm:py-4 text-base"
                                 style={{
                                     background:
                                         "linear-gradient(90deg, rgba(145, 173, 186, 0.8) -11.36%, rgba(32, 81, 102, 0.096) 104.55%)",
@@ -244,7 +244,7 @@ export default function Presale() {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-end items-center max-sm:items-center max-sm:justify-center">
+                <div className="flex justify-end items-center max-sm:items-center max-sm:justify-center  w-[80%] mx-auto">
                     <div className="flex flex-col">
                         <h1 className="w-[400px] max-sm:max-w-[250px] text-[48px] mb-5 max-sm:text-[36px] text-white font-semibold">
                             Self-Custodial Trading Bot

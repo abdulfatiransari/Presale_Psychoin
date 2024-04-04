@@ -1,6 +1,7 @@
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import React from "react";
+import LazyImage from "../LazyImage";
 
 const Build = () => {
   return (
@@ -36,7 +37,7 @@ const Build = () => {
           background: "radial-gradient(at center top, #222833, #0C0C0C)",
         }}
       >
-        <Image
+        <LazyImage
           src={"/img/mentalHealth.gif"}
           // className="w-[383px] h-[457px] max-sm:h-[360px] max-md:h-[400px] max-lg:h-[450px]"
           // className="w-[383px] !h-[240px] md:!h-[400px]"

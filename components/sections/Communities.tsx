@@ -1,6 +1,7 @@
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import React from "react";
+import LazyImage from "../LazyImage";
 
 const Community = () => {
   return (
@@ -11,13 +12,11 @@ const Community = () => {
           background: "radial-gradient(at center top, #222833, #0C0C0C)",
         }}
       >
-        <Image
+        <LazyImage
           src={"/img/communityGif.gif"}
           // className="w-[300px] h-[395px] max-sm:h-[360px]  max-md:h-[400px] max-lg:h-[450px]"
           className="w-[383px] !h-[370px] md:!h-[400px]"
-
           style={{ objectPosition: 'center', objectFit: 'cover' }}
-
           width={100}
           height={100}
           alt="coin"
