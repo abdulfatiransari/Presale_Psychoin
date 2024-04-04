@@ -28,7 +28,7 @@ const PlayCards = () => {
         {cardData.map((card) => (
           <div
             key={card.id}
-            className="rounded-t-[30px] w-fit px-8 py-6 max-sm:px-0 max-sm:py-2 gap-10 flex-col flex-wrap justify-center items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 h-full max-md:w-full max-md:h-full max-sm:w-full max-sm:h-full"
+            className="rounded-t-[30px] w-fit px-8 py-6 max-sm:px-2 max-sm:py-4 gap-10 flex-col flex-wrap justify-center items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 h-full max-md:h-full max-sm:h-full"
             style={{
               background: "radial-gradient(at center top, #222833, #0C0C0C)",
             }}
@@ -44,7 +44,7 @@ const PlayCards = () => {
             </div>
             <div className="flex justify-center items-center">
               <Button
-                className="font-semibold flex text-white rounded-[100px] px-8 py-4 text-base max-sm:text-[12px]"
+                className="font-semibold flex text-white rounded-[100px] py-4 text-base max-sm:text-[12px]"
                 style={{
                   background:
                     "linear-gradient(90deg, rgba(145, 173, 186, 0.8) -11.36%, rgba(32, 81, 102, 0.096) 104.55%)",

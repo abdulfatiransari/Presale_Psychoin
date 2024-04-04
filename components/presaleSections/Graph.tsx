@@ -13,7 +13,7 @@ const Graph = () => {
               "linear-gradient(0deg, rgba(109, 0, 204, 0.5), rgba(109, 0, 204, 0.5)), radial-gradient(100% 100% at 50% 0%, rgba(131, 172, 240, 0.2) 0.27%, rgba(131, 172, 240, 0) 100%)"
           }}
         >
-          <div className="flex flex-col justify-center items-center py-20 max-sm:py-10 gap-2 w-full">
+          <div className="flex flex-col justify-center items-center pt-10 pb-20 max-sm:py-10 gap-2 w-full">
         <div className="flex gap-2 justify-center items-center mb-4">
           <Image src={"/img/PSYCHOIN.png"} alt="logo" width={25} height={25} />
           <p className="font-semibold text-[18px] text-white ">

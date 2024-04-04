@@ -212,7 +212,7 @@ export default function Presale() {
                     backgroundRepeat: "no-repeat",
                 }}
             >
-                <div className="flex justify-center items-center">
+                {/* <div className="flex justify-center items-center">
                     <div
                         className="rounded-t-[30px]  border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 bg-gradient-to-t "
                         style={{
@@ -243,11 +243,11 @@ export default function Presale() {
                             </Button>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="flex justify-end items-center max-sm:items-center max-sm:justify-center w-full  mx-auto">
                     <div className="flex flex-col w-full max-w-[440px] ">
-                        <h1 className="max-w-[400px] text-[48px] mb-5 max-sm:text-[26px] text-white font-semibold">
-                            Self-Custodial Trading Bot
+                        <h1 className="max-w-[400px] text-[48px] mb-5 max-sm:text-center max-sm:text-[26px] text-white font-semibold">
+                            Get Your Psychoin
                         </h1>
                         <div
                             className="rounded-t-[30px] px-6 py-4 mt-5 flex flex-col border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 w-full"
