@@ -43,15 +43,16 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
   return (
     <div
-      className={`bg-transparent flex flex-col w-full ${isSticky ? "fixed z-[9999] transition" : ""
+      className={`bg-transparent flex flex-col w-full ${isSticky ? "fixed z-[10] transition" : ""
         }`}
     >
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
         isMenuOpen={isMenuOpen}
-        className="bg-transparent py-1 px-8 max-lg:px-0 max-sm:px-2 max-sm:pl-0 flex justify-between [&>header]:!max-w-full"
+        className="bg-transparent py-1 px-8 max-lg:px-0 max-sm:px-2 z-0 max-sm:pl-0 flex justify-between [&>header]:!max-w-full"
       >
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
