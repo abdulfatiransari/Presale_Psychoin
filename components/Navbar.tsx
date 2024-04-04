@@ -51,11 +51,11 @@ export default function Header() {
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
         isMenuOpen={isMenuOpen}
-        className="bg-transparent py-1 px-8 max-lg:px-1 max-sm:px-2 max-sm:pl-0 flex justify-between [&>header]:!max-w-full"
+        className="bg-transparent py-1 px-8 max-lg:px-0 max-sm:px-2 max-sm:pl-0 flex justify-between [&>header]:!max-w-full"
       >
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="lg:hidden "
+          className="lg:hidden max-sm:pl-0"
         />
         <NavbarBrand
           className="flex items-center gap-2 cursor-pointer"
@@ -64,7 +64,7 @@ export default function Header() {
           }}
         >
           <Logo />
-          <p className="font-semibold text-4xl max-sm:text-2xl max-md:text-3xl text-inherit ">
+          <p className="font-semibold text-4xl max-sm:text-xl max-md:text-3xl text-inherit ">
             Psychoin
           </p>
         </NavbarBrand>

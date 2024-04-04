@@ -28,7 +28,7 @@ const PlayCards = () => {
         {cardData.map((card) => (
           <div
             key={card.id}
-            className="rounded-t-[30px] w-fit px-8 py-6 max-sm:px-2 max-sm:py-2 gap-10 flex-col flex-wrap justify-center items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 h-full max-md:w-full max-md:h-full max-sm:w-full max-sm:h-full"
+            className="rounded-t-[30px] w-fit px-8 py-6 max-sm:px-0 max-sm:py-2 gap-10 flex-col flex-wrap justify-center items-center border-t-1.5 border-t-gray-400 border-x-gray-500 border-x-1 h-full max-md:w-full max-md:h-full max-sm:w-full max-sm:h-full"
             style={{
               background: "radial-gradient(at center top, #222833, #0C0C0C)",
             }}
