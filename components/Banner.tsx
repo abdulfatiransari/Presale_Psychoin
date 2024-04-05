@@ -24,14 +24,14 @@ export default function Banner() {
         <div className="flex flex-col py-12 gap-2 w-[530px] ">
           <div className="flex gap-4 items-center">
             <Image src={"/img/PSYCHOIN.png"} alt="logo" width={45} height={45} />
-            <p className="font-bold text-[32px] text-[#6D00CC] max-md:text-[28px] max-sm:text-[24px]">
+            <p className="font-bold text-[32px] text-[#6D00CC] max-md:text-[28px] max-lg:text-[28px] max-sm:text-[24px]">
               PSYCHOIN
             </p>
           </div>
-          <h3 className="text-[48px] font-semibold md:w-[550px] text-white leading-[67.2px] max-md:text-[32px] max-sm:text-[28px] max-md:leading-10 max-sm:leading-10">
+          <h3 className="text-[48px] font-semibold md:w-[550px] text-white leading-[67.2px] max-md:text-[32px] max-lg:text-[32px] max-sm:text-[28px] max-md:leading-10 max-sm:leading-10">
             A Revolutionary Approach to Well-being
           </h3>
-          <p className="text-[24px] text-[#CDCDCD]   mt-4 leading-[38.4px] max-md:text-[20px] max-sm:text-[18px] max-md:leading-8 max-sm:leading-8">
+          <p className="text-[24px] text-[#CDCDCD]   mt-4 leading-[38.4px] max-md:text-[20px] max-lg:text-[20px] max-sm:text-[18px] max-md:leading-8 max-sm:leading-8">
             Embark on a journey into a community driven by the latest discoveries in neuroscience and psychology, dedicated to democratizing well-being. With Psychoin token at its core, unlock a new dimension of mental health and personal development.          </p>
           <div className="flex gap-4 mt-4">
             <Link
@@ -47,7 +47,7 @@ export default function Banner() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col relative max-md:hidden items-end">
+        <div className="flex flex-col relative max-lg:hidden items-end">
           {/* <div className="flex absolute mt-6 pr-16">
             <Button className="font-semibold text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base">
               Join Us
