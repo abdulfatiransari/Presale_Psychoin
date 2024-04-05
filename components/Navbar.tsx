@@ -20,7 +20,7 @@ export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
 
   const menuItems = [
-    { id: "#presale", label: "Buy Now" },
+    { id: "#buynow", label: "Buy Now" },
     { id: "#about", label: "About" },
     { id: "#services", label: "Services" },
     { id: "/pdf/whitepaper.pdf", label: "Whitepaper", newTab: true },

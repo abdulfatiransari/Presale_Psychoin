@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="flex flex-col w-[515px]">
           <h4 className="font-semibold text-xl">Subscribe to Newsletter</h4>
           <p className="text-[#CDCDCD] text-base mt-4">
-            Stay connected with the latest in mental health, community achievements, and Psychoin updates. Join us in spreading well-being and empowerment.
+            Stay connected with the latest mental health, community achievements, and Psychoin updates. Join us in spreading well-being and empowerment.
           </p>
         </div>
         <div className="flex gap-4 items-center w-[#495px] max-sm: mt-6">

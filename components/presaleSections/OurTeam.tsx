@@ -15,7 +15,7 @@ const mindsData = [
   {
     srcUrl: "/img/IconTeam3.svg",
     description:
-      "With our carefully curated TMA at its core, your user experience will be nothing short of incredible.",
+      "With our carefully curated TMA at its core, your user experience will be nothing short of incredible",
   },
 ];
 
@@ -25,14 +25,14 @@ const cardData = [
     member: "D. Usmanov",
     designation: "CEO",
     srcUrl: "/img/CEO.svg",
-    info: "D. Usmanov stands as a Visionary Investor and influential figure within the Financial realm, fervently envisioning the transformation of Well-being through Digital Currency and Pioneering Advancements in mental wellness innovation.",
+    info: "D. Usmanov stands as a Visionary Investor and influential figure within the Financial realm, fervently envisioning the transformation of Well-being through Digital Currency and Pioneering Advancements in mental wellness innovation",
   },
   {
     id: 1,
     member: "A. Malioukis",
     designation: "Chief Scientific Advisor",
     srcUrl: "/img/alexNewImage.svg",
-    info: "As the Leading Scientific Consultant and Head of the Scientific team behind Psychoin, Alex Malioukis, a seasoned Cognitive Neuroscientist and Clinical Neuropsychologist, ensures that the vision behind Psychoin adheres to scientific criteria and safeguards the well-being of the Community.",
+    info: "As the Leading Scientific Consultant and Head of the Scientific team behind Psychoin, Alex Malioukis, a seasoned Cognitive Neuroscientist and Clinical Neuropsychologist, ensures that the vision behind Psychoin adheres to scientific criteria and safeguards the well-being of the Community",
   },
 ];
 
