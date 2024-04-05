@@ -5,12 +5,12 @@ import React from "react";
 const mindsData = [
   {
     srcUrl: "/img/IconTeam1.svg",
-    description: "Over a decade of trading experience in Investment Banking.",
+    description: "Over a decade of trading experience in Investment Banking",
   },
   {
     srcUrl: "/img/IconTeam2.svg",
     description:
-      "Bulletproof self-custody solution is rigorously tested and trusted by industry titans.",
+      "Bulletproof self-custody solution is rigorously tested and trusted by industry titans",
   },
   {
     srcUrl: "/img/IconTeam3.svg",
