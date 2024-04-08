@@ -14,8 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
   const searchParams = useSearchParams()
   useEffect(() => {
     // fetch('/api/webhooks-caller')
-
-    if(localStorage.getItem('toastRead')) return;
+    const toastRead = `${localStorage.getItem('toastRead')}`;
+    if(toastRead !== 'null') return;
 
     if(searchParams.get('success')){
 
@@ -26,10 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
     toast.error("Payment Cancelled")
     localStorage.setItem('toastRead', 'true')
-
     }
-
-
 
   }, [])
 

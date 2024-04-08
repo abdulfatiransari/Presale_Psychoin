@@ -37,7 +37,7 @@ const Graph = () => {
         //   }}
         >
           <Image
-            src={"/img/ChartNew.svg"}
+            src={"/img/Image.svg"}
             className="w-full h-full"
             width={100}
             height={100}

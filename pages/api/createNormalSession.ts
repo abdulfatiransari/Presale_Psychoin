@@ -6,7 +6,7 @@ import { fireDB } from "@/firebaseConfig/firebase";
 
 const stripe = new Stripe(`${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`);
 
-const YOUR_DOMAIN = 'http://localhost:3000';
+const YOUR_DOMAIN = 'https://psychoin.vercel.app/';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
     if (req.method !== 'POST') {
@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
                 },
             ],
             mode: 'payment',
-            success_url: `${YOUR_DOMAIN}?success=true`,
+            success_url: `${YOUR_DOMAIN}?success=true&reciverAddress=${walletAddress}&quantity=${quantity}`,
             cancel_url: `${YOUR_DOMAIN}?canceled=true`,
         });
 
