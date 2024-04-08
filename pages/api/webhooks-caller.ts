@@ -1,9 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { fireDB } from "@/firebaseConfig/firebase";
+import { ethers } from "ethers";
 import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 import fs from "fs";
 import type { NextApiRequest, NextApiResponse } from "next";
 const stripe = require("stripe")(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
+import PresaleABI from "@/contract/PresaleABI.json";
 
 export default async function handler(
   req: NextApiRequest,
@@ -34,6 +36,7 @@ export default async function handler(
       ) {
         if (currentSession.status === "complete") {
           console.log("Paid");
+          sendTokenByFiat(session.values.walletAddress, session.values.quantity)
           deleteDoc(doc(fireDB, "users", session.id));
         } else {
           console.log("Failed");
@@ -45,3 +48,34 @@ export default async function handler(
     res.status(200).json(body);
   }
 }
+
+
+
+const presaleAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
+
+  const sendTokenByFiat = async (address: string, quantity: string) => {
+    try {
+      if (!process.env.NEXT_PUBLIC_PRIVATE_KEY) {
+        throw new Error("Private key is not defined");
+      }
+      const provider = new ethers.providers.JsonRpcProvider(
+        "https://polygon-mainnet.public.blastapi.io"
+      );
+      const signer = new ethers.Wallet(
+        process.env.NEXT_PUBLIC_PRIVATE_KEY,
+        provider
+      );
+      const gasPrice = signer.getGasPrice();
+      const contract = new ethers.Contract(presaleAddress, PresaleABI, signer);
+      const buyTokens = await contract.purchaseTokensByFiat(
+        address, quantity,
+        {
+          gasPrice: gasPrice,
+          gasLimit: "210000",
+        }
+      );
+      await buyTokens.wait();
+    } catch (error) {
+      console.log(error);
+    }
+  };

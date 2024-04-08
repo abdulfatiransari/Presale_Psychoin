@@ -1,7 +1,7 @@
 import { useWeb3ModalProvider } from "@web3modal/ethers5/react";
 import { ethers } from "ethers";
 import PresaleABI from "@/contract/PresaleABI.json";
-const contractAddress = "0xC1E05ccDb22b44a1DC66Ff781D83C6D001385245";
+const contractAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
 
 export const useWeb3Instance = () => {
     // Call useWeb3ModalProvider directly within the Hook
