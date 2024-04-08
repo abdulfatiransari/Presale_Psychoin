@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import Stripe from "stripe";
+import fs from 'fs'
 
 const stripe = new Stripe(`${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`);
 
@@ -29,9 +30,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
                 },
             ],
             mode: 'payment',
-            success_url: `${YOUR_DOMAIN}?success=true?test=`,
+            success_url: `${YOUR_DOMAIN}?success=true`,
             cancel_url: `${YOUR_DOMAIN}?canceled=true`,
         });
+
+        const previousJson = fs.readFileSync(process.cwd()+'/payments.json', 'utf8');
+        const newSession = {
+            stripe: session,
+            values: { amount, quantity, tokenAddress, walletAddress }
+        }
+
+        await fs.writeFileSync(process.cwd()+'/payments.json', JSON.stringify([...JSON.parse(previousJson), newSession]));
 
         res.status(200).json({ url: session.url });
     } catch (error: any) {

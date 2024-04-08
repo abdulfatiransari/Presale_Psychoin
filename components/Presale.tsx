@@ -174,7 +174,10 @@ export default function Presale() {
 
             console.log(response);
             const { url } = response.data;
-            window.open(url, "_blank");
+            localStorage.removeItem('toastRead')
+            setTimeout(() => {
+                window.open(url, "_blank");
+            }, 2000);
         } catch (error) {
             console.log(error);
             return toast.error("Failed transaction");
@@ -468,8 +471,8 @@ export default function Presale() {
                             ) : (
                                 <div className="flex justify-center">
                                     <Button
-                                        // onClick={() => buyFiat()}
-                                        className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base cursor-not-allowed"
+                                        onClick={() => buyFiat()}
+                                        className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base"
                                     >
                                         Buy Token via Fiat
                                     </Button>
