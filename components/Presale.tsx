@@ -16,7 +16,7 @@ export default function Presale() {
     const [presaleTotalToken, setPresaleTotalToken] = useState<string>();
     const [tokensRemains, settokensRemains] = useState<string>("");
     const [price, setPrice] = useState<any>();
-    const [quantity, setQuantity] = useState<any>("1");
+    const [quantity, setQuantity] = useState<any>("10");
     const [recieverAddress, setRecieverAddress] = useState<string>();
     const [youPurchased, setYouPurchased] = useState<string>();
     const [loading, setLoading] = useState(false);

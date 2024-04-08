@@ -13,7 +13,7 @@ import { useSearchParams } from "next/navigation";
 export default function App({ Component, pageProps }: AppProps) {
   const searchParams = useSearchParams()
   useEffect(() => {
-    fetch('/api/webhooks-caller')
+    // fetch('/api/webhooks-caller')
 
     if(localStorage.getItem('toastRead')) return;
 

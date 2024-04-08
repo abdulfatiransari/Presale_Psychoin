@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import Stripe from "stripe";
 import fs from 'fs'
+import { addDoc, collection, doc } from "firebase/firestore";
+import { fireDB } from "@/firebaseConfig/firebase";
 
 const stripe = new Stripe(`${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`);
 
@@ -34,13 +36,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
             cancel_url: `${YOUR_DOMAIN}?canceled=true`,
         });
 
-        const previousJson = fs.readFileSync(process.cwd()+'/payments.json', 'utf8');
         const newSession = {
             stripe: session,
             values: { amount, quantity, tokenAddress, walletAddress }
         }
 
-        await fs.writeFileSync(process.cwd()+'/payments.json', JSON.stringify([...JSON.parse(previousJson), newSession]));
+        
+        try {
+            const docRef = await addDoc(collection(fireDB, "users"), newSession);
+            console.log("Document written with ID: ", docRef.id);
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
 
         res.status(200).json({ url: session.url });
     } catch (error: any) {
