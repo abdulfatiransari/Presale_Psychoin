@@ -9,7 +9,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
             const paymentIntent = await stripe.paymentIntents.retrieve(
                 paymentID
             );
-            console.log(paymentIntent)
 
             // Respond to the webhook with a 200 status code
             res.status(200).json({ received: true });

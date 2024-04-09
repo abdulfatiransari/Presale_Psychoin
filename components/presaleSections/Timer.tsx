@@ -4,7 +4,6 @@ import { useWeb3Instance } from "../utils/instance";
 
 const Timer = () => {
     const { address } = useWeb3ModalAccount();
-    const [timeLeft, setTimeLeft] = useState<string>();
     const [currentDate, setCurrentDate] = useState<any>(false);
 
     const myContract = useWeb3Instance() as any;
@@ -13,15 +12,11 @@ const Timer = () => {
         const now = Math.floor(Date.now() / 1000);
         const timestamp = await myContract.presaleEndTime();
         const timeLeftInSeconds = timestamp - now;
-        if (timeLeftInSeconds <= 0) {
-            setTimeLeft("Presale has ended");
-        } else {
+        if (timeLeftInSeconds > 0) {
             const days = Math.floor(timeLeftInSeconds / (60 * 60 * 24));
             const hours = Math.floor((timeLeftInSeconds % (60 * 60 * 24)) / (60 * 60));
             const minutes = Math.floor((timeLeftInSeconds % (60 * 60)) / 60);
             const seconds = Math.floor(timeLeftInSeconds % 60);
-            setTimeLeft(`${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
-            console.log(timeLeft);
             setCurrentDate({
                 day: days,
                 hours: hours,
