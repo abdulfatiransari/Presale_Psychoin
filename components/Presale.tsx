@@ -1,7 +1,6 @@
 import { Button, Progress, Tab, Tabs } from "@nextui-org/react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { ethers } from "ethers";
@@ -10,7 +9,6 @@ import {
   useWeb3ModalAccount,
   useWeb3ModalProvider,
 } from "@web3modal/ethers5/react";
-import PresaleFunc from "./PresaleFunc";
 
 export default function Presale() {
   const { walletProvider } = useWeb3ModalProvider();
@@ -25,7 +23,6 @@ export default function Presale() {
   const [loading, setLoading] = useState(false);
   const [bal, setBal] = useState<string>();
   const [keys, setKeys] = useState<string>("crypto");
-  const [wallet, setWallet] = useState<string>("");
 
   const presaleAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
 
@@ -207,6 +204,8 @@ export default function Presale() {
         return toast.error("Invalid Address");
       }
 
+      setLoading(true);
+
       const response = await axios.post("/api/createNormalSession", {
         amount: Math.round(price.toString() * 100),
         quantity: quantity,
@@ -220,8 +219,11 @@ export default function Presale() {
       setTimeout(() => {
         window.open(url, "_blank");
       }, 2000);
+      setLoading(false);
+
     } catch (error) {
       console.log(error);
+      setLoading(false);
       return toast.error("Failed transaction");
     }
   };
@@ -546,6 +548,7 @@ export default function Presale() {
                   <Button
                     onClick={() => buyFiat()}
                     className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base"
+                    isLoading={loading}
                   >
                     Buy Token via Fiat
                   </Button>
