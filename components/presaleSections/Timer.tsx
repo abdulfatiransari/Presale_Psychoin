@@ -4,7 +4,12 @@ import { useWeb3Instance } from "../utils/instance";
 
 const Timer = () => {
     const { address } = useWeb3ModalAccount();
-    const [currentDate, setCurrentDate] = useState<any>(false);
+    const [currentDate, setCurrentDate] = useState<any>({
+        day: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+    });
 
     const myContract = useWeb3Instance() as any;
 

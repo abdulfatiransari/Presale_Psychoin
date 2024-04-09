@@ -21,7 +21,7 @@ export default function Presale() {
   const [price, setPrice] = useState<any>();
   const [quantity, setQuantity] = useState<any>("10");
   const [recieverAddress, setRecieverAddress] = useState<string>();
-  const [youPurchased, setYouPurchased] = useState<string>();
+  const [youPurchased, setYouPurchased] = useState<number>();
   const [loading, setLoading] = useState(false);
   const [bal, setBal] = useState<string>();
   const [keys, setKeys] = useState<string>("crypto");
@@ -125,7 +125,7 @@ export default function Presale() {
         );
         const purchasedTokens = await contract.purchasedTokens(address);
         const convert = ethers.utils.formatEther(purchasedTokens);
-        setYouPurchased(convert.toString());
+        setYouPurchased(Number(convert));
       }
     } catch (error) {
       console.log(error);
@@ -455,7 +455,7 @@ export default function Presale() {
                   You Purchased:
                 </span>
                 <span className="text-[24px] font-semibold ">
-                  {youPurchased}
+                  {youPurchased?.toFixed(2)}
                 </span>
               </div>
               <div className="flex gap-[4px] mr-[60px] mb-2">
