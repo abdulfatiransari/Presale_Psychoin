@@ -15,17 +15,19 @@ export default async function handler(
     const webhookEndpoint = await stripe.webhookEndpoints.create({
       enabled_events: ["charge.succeeded", "charge.failed"],
       url: "https://psychoin.vercel.app/api/webhooks-caller",
-      // url: "https://8733-175-107-217-4.ngrok-free.app/api/webhooks-caller"
+      // url: "https://d00c-175-107-217-4.ngrok-free.app/api/webhooks-caller"
     });
     console.log(webhookEndpoint);
     res.status(200).json({ name: "John Doe" });
-  } else if (req.method === "POST") {
+  } else {
     const body = req.body;
+    console.log(body)
     const querySnapshot = await getDocs(collection(fireDB, "users"));
     const previousJson = Array.from(querySnapshot.docs).map((snapshot) => ({
       ...snapshot.data(),
       id: snapshot.id,
     }));
+    console.log(previousJson.length)
     const sessions = previousJson;
     sessions.forEach(async (session: any) => {
       const currentSession = await stripe.checkout.sessions.retrieve(
