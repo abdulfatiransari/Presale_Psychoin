@@ -15,6 +15,7 @@ export default async function handler(
     const webhookEndpoint = await stripe.webhookEndpoints.create({
       enabled_events: ["charge.succeeded", "charge.failed"],
       url: "https://psychoin.vercel.app/api/webhooks-caller",
+      // url: "https://8733-175-107-217-4.ngrok-free.app/api/webhooks-caller"
     });
     console.log(webhookEndpoint);
     res.status(200).json({ name: "John Doe" });
@@ -68,7 +69,7 @@ const presaleAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
       const gasPrice = signer.getGasPrice();
       const contract = new ethers.Contract(presaleAddress, PresaleABI, signer);
       const buyTokens = await contract.purchaseTokensByFiat(
-        address, quantity,
+        address, ethers.utils.parseUnits(quantity, '18').toString(),
         {
           gasPrice: gasPrice,
           gasLimit: "210000",
