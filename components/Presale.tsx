@@ -9,8 +9,10 @@ import {
   useWeb3ModalAccount,
   useWeb3ModalProvider,
 } from "@web3modal/ethers5/react";
+import { useRouter } from "next/router";
 
 export default function Presale() {
+  const router = useRouter();
   const { walletProvider } = useWeb3ModalProvider();
   const { address } = useWeb3ModalAccount();
   const [contractOwner, setContractOwner] = useState<string>();
@@ -217,7 +219,7 @@ export default function Presale() {
       const { url } = response.data;
       localStorage.removeItem("toastRead");
       setTimeout(() => {
-        window.open(url, "_blank");
+        router.push(url);
       }, 2000);
       setLoading(false);
 

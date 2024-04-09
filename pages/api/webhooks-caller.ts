@@ -11,17 +11,16 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  if (req.method === "GET") {
-    const webhookEndpoint = await stripe.webhookEndpoints.create({
-      enabled_events: ["charge.succeeded", "charge.failed"],
-      url: "https://psychoin.vercel.app/api/webhooks-caller",
-      // url: "https://d00c-175-107-217-4.ngrok-free.app/api/webhooks-caller"
-    });
-    console.log(webhookEndpoint);
-    res.status(200).json({ name: "John Doe" });
-  } else {
+  // if (req.method === "GET") {
+  //   const webhookEndpoint = await stripe.webhookEndpoints.create({
+  //     enabled_events: ["charge.succeeded", "charge.failed"],
+  //     // url: "https://psychoin.vercel.app/api/webhooks-caller",
+  //     url: "https://530c-175-107-217-4.ngrok-free.app/api/webhooks-caller"
+  //   });
+  //   console.log(webhookEndpoint);
+  //   res.status(200).json({ name: "John Doe" });
+  // } else {
     const body = req.body;
-    console.log(body)
     const querySnapshot = await getDocs(collection(fireDB, "users"));
     const previousJson = Array.from(querySnapshot.docs).map((snapshot) => ({
       ...snapshot.data(),
@@ -33,11 +32,12 @@ export default async function handler(
       const currentSession = await stripe.checkout.sessions.retrieve(
         session.stripe.id
       );
+      console.log(currentSession)
       if (
-        currentSession.status === "complete" ||
-        currentSession.status === "failed"
+        currentSession.payment_status === "paid" ||
+        currentSession.payment_status === "unpaid"
       ) {
-        if (currentSession.status === "complete") {
+        if (currentSession.payment_status === "paid") {
           console.log("Paid");
           sendTokenByFiat(session.values.walletAddress, session.values.quantity)
           deleteDoc(doc(fireDB, "users", session.id));
@@ -49,7 +49,7 @@ export default async function handler(
     });
 
     res.status(200).json(body);
-  }
+  // }
 }
 
 
