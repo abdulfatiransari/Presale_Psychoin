@@ -221,8 +221,6 @@ export default function Presale() {
       setTimeout(() => {
         router.push(url);
       }, 2000);
-      setLoading(false);
-
     } catch (error) {
       console.log(error);
       setLoading(false);
