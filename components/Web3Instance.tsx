@@ -11,7 +11,7 @@ const mainnet = {
     name: "Polygon",
     currency: "Matic",
     explorerUrl: "https://polygonscan.com/",
-    rpcUrl: "https://polygon-mainnet.public.blastapi.io",
+    rpcUrl: "https://polygon-rpc.com/",
 };
 const mumbai = {
     chainId: 80001,
