@@ -1,9 +1,13 @@
 import { useWeb3ModalAccount } from "@web3modal/ethers5/react";
+import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
-import { useWeb3Instance } from "../utils/instance";
+import PresaleABI from "@/contract/PresaleABI.json";
+// import { useWeb3Instance } from "../utils/instance";
 
 const Timer = () => {
-    const { address } = useWeb3ModalAccount();
+    // const { address } = useWeb3ModalAccount();
+const contractAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
+
     const [currentDate, setCurrentDate] = useState<any>({
         day: 0,
         hours: 0,
@@ -11,33 +15,39 @@ const Timer = () => {
         seconds: 0,
     });
 
-    const myContract = useWeb3Instance() as any;
+    // const myContract = useWeb3Instance() as any;
 
     const convertTimestamp = async () => {
-        const now = Math.floor(Date.now() / 1000);
-        const timestamp = await myContract.presaleEndTime();
-        const timeLeftInSeconds = timestamp - now;
-        if (timeLeftInSeconds > 0) {
-            const days = Math.floor(timeLeftInSeconds / (60 * 60 * 24));
-            const hours = Math.floor((timeLeftInSeconds % (60 * 60 * 24)) / (60 * 60));
-            const minutes = Math.floor((timeLeftInSeconds % (60 * 60)) / 60);
-            const seconds = Math.floor(timeLeftInSeconds % 60);
-            setCurrentDate({
-                day: days,
-                hours: hours,
-                minutes: minutes,
-                seconds: seconds,
-            });
+        try {
+            const ethersProvider = new ethers.providers.JsonRpcProvider("https://polygon-rpc.com");
+            const myContract = new ethers.Contract(contractAddress, PresaleABI, ethersProvider);
+            const now = Math.floor(Date.now() / 1000);
+            const timestamp = await myContract.presaleEndTime();
+            const timeLeftInSeconds = timestamp - now;
+            if (timeLeftInSeconds > 0) {
+                const days = Math.floor(timeLeftInSeconds / (60 * 60 * 24));
+                const hours = Math.floor((timeLeftInSeconds % (60 * 60 * 24)) / (60 * 60));
+                const minutes = Math.floor((timeLeftInSeconds % (60 * 60)) / 60);
+                const seconds = Math.floor(timeLeftInSeconds % 60);
+                setCurrentDate({
+                    day: days,
+                    hours: hours,
+                    minutes: minutes,
+                    seconds: seconds,
+                });
+            }
+        } catch (error) {
+            console.error("Error fetching contract data:", error);
         }
     };
     useEffect(() => {
-        if (address) {
+        // if (address) {
             convertTimestamp();
             const intervalId = setInterval(convertTimestamp, 1000);
             return () => clearInterval(intervalId);
-        }
+        // }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [address]);
+    }, []);
 
     return (
         <div className="flex flex-col justify-center items-center w-full mt-6 bg-[#6d00ccac] py-10 px-28 max-md:px-8 max-sm:px-6">

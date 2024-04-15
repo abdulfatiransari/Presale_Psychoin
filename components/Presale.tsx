@@ -198,12 +198,11 @@ export default function Presale() {
   const buyFiat = async () => {
     try {
       if (!recieverAddress) {
-        return toast.error("Please provide a wallet address");
+        return toast.error("Please provide receiver's wallet address");
       }
-      if (recieverAddress) {
-        const verifyAddress = ethers.utils.getAddress(recieverAddress);
-      } else {
-        return toast.error("Invalid Address");
+      // Check if the address is valid
+      if (!ethers.utils.isAddress(recieverAddress)) {
+        return toast.error("Invalid receiver's address");
       }
 
       setLoading(true);
@@ -215,7 +214,6 @@ export default function Presale() {
         walletAddress: recieverAddress,
       });
 
-      console.log(response);
       const { url } = response.data;
       localStorage.removeItem("toastRead");
       setTimeout(() => {
@@ -490,7 +488,7 @@ export default function Presale() {
                   </div>
                   <div className="flex gap-[4px] mb-2 max-sm:flex-wrap">
                     <span className="text-[16px] text-[#CDCDCD] mt-2">
-                      Reciever Address:
+                    Receiver Address:
                     </span>
                     <input
                       placeholder="Reciever Address"
