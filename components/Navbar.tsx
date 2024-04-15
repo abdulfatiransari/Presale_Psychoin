@@ -51,6 +51,7 @@ export default function Header() {
     >
       <div className="4xl1:flex 4xl1:justify-center 4xl1:items-center">
       <div className="4xl1:max-w-[1440px]">
+        
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
         isMenuOpen={isMenuOpen}
