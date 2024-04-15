@@ -49,6 +49,8 @@ export default function Header() {
       className={`bg-transparent flex flex-col w-full ${isSticky ? "fixed z-[10] transition" : ""
         }`}
     >
+      <div className="4xl1:flex 4xl1:justify-center 4xl1:items-center">
+      <div className="4xl1:max-w-[1440px]">
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
         isMenuOpen={isMenuOpen}
@@ -117,6 +119,8 @@ export default function Header() {
         height={0}
         className="w-full h-[1px]"
       />
+      </div>
+      </div>
     </div>
   );
 }

@@ -29,7 +29,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <Web3ModalProvider>
       <NextUIProvider>
         <Header />
+        <div className="4xl1:flex 4xl1:justify-center 4xl1:items-center">
+        <div className="4xl1:max-w-[1440px]">
         <Component {...pageProps} />
+        </div>
+        </div>
         <Footer />
         <ToastContainer />
       </NextUIProvider>

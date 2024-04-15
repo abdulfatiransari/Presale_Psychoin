@@ -23,6 +23,8 @@ export default function Footer() {
           "linear-gradient(180deg, rgba(109, 0, 204, 0.2) 50%, #6D00CC 103.39%",
       }}
     >
+      <div className="4xl1:flex 4xl1:justify-center 4xl1:items-center">
+      <div className="4xl1:max-w-[1440px]">
       <div className="flex justify-between items-center max-md:flex-wrap ">
         <div className="flex flex-col w-[515px]">
           <h4 className="font-semibold text-xl">Subscribe to Newsletter</h4>
@@ -82,6 +84,8 @@ export default function Footer() {
       </div>
       <Image src={"/img/Line 8.png"} alt="line" width={0} height={0} className="w-full h-[1px] mt-10 mb-6" />
       <p className="text-white text-center mt-6">Copyright © 2024 Psychoin</p>
+      </div>
+      </div>
     </div>
   );
 }
