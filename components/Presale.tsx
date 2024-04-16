@@ -144,6 +144,11 @@ export default function Presale() {
         signer
       );
 
+      if(quantity < 10){
+        setLoading(false);
+        return toast.error("Quantity must be greater or equal than 10");
+      }
+
       const convertQuantity = ethers.utils.parseUnits(quantity, "18");
 
       const calculatePrice = ethers.utils.parseUnits(price, "18");
@@ -199,6 +204,11 @@ export default function Presale() {
       }
 
       setLoading(true);
+
+      if(quantity < 10){
+        setLoading(false);
+        return toast.error("Quantity must be greater or equal than 10");
+      }
 
       const response = await axios.post("/api/createNormalSession", {
         amount: Math.round(price.toString() * 100),
@@ -519,9 +529,6 @@ export default function Presale() {
                   // min={10}
                 />
               </div>
-                {quantity < 10 && (
-                  <p className="text-red-500">Quantity must be greater than 9</p>
-                )}
               </div>
               <div className="mt-2 mb-2 flex justify-center items-center">
                 <Image
