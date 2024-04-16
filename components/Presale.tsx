@@ -520,7 +520,7 @@ export default function Presale() {
                 />
               </div>
                 {quantity < 10 && (
-                  <p className="text-red-500">Quantity must be greater than 10</p>
+                  <p className="text-red-500">Quantity must be greater than 9</p>
                 )}
               </div>
               <div className="mt-2 mb-2 flex justify-center items-center">
