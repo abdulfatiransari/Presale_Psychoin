@@ -50,20 +50,17 @@ export default function Presale() {
 
   const presaleTotalTokens = async () => {
     try {
-      if (walletProvider) {
-        const ethersProvider = new ethers.providers.Web3Provider(
-          walletProvider
-        );
-        const signer = ethersProvider.getSigner();
-        const contract = new ethers.Contract(
-          presaleAddress,
-          PresaleABI,
-          signer
-        );
-        const presaleTotalTokens = await contract.presaleTotalTokens();
-        const convert = ethers.utils.formatEther(presaleTotalTokens);
-        setPresaleTotalToken(convert.toString());
-      }
+      const ethersProvider = new ethers.providers.JsonRpcProvider(
+        "https://polygon-rpc.com"
+      );
+      const contract = new ethers.Contract(
+        presaleAddress,
+        PresaleABI,
+        ethersProvider
+      );
+      const presaleTotalTokens = await contract.presaleTotalTokens();
+      const convert = ethers.utils.formatEther(presaleTotalTokens);
+      setPresaleTotalToken(convert.toString());
     } catch (error) {
       console.log(error);
     }
@@ -71,20 +68,18 @@ export default function Presale() {
 
   const tokensSold = async () => {
     try {
-      if (walletProvider) {
-        const ethersProvider = new ethers.providers.Web3Provider(
-          walletProvider
-        );
-        const signer = ethersProvider.getSigner();
-        const contract = new ethers.Contract(
-          presaleAddress,
-          PresaleABI,
-          signer
-        );
-        const tokensSold = await contract.tokensSold();
-        const convert = ethers.utils.formatEther(tokensSold);
-        settokensRemains(convert.toString());
-      }
+      const ethersProvider = new ethers.providers.JsonRpcProvider(
+        "https://polygon-rpc.com"
+      );
+      // const signer = ethersProvider.getSigner();
+      const contract = new ethers.Contract(
+        presaleAddress,
+        PresaleABI,
+        ethersProvider
+      );
+      const tokensSold = await contract.tokensSold();
+      const convert = ethers.utils.formatEther(tokensSold);
+      settokensRemains(convert.toString());
     } catch (error) {
       console.log(error);
     }
@@ -92,20 +87,18 @@ export default function Presale() {
 
   const tokenPrice = async () => {
     try {
-      if (walletProvider) {
-        const ethersProvider = new ethers.providers.Web3Provider(
-          walletProvider
-        );
-        const signer = ethersProvider.getSigner();
-        const contract = new ethers.Contract(
-          presaleAddress,
-          PresaleABI,
-          signer
-        );
-        const tokenPrice = await contract.tokenPrice();
-        const convert = ethers.utils.formatEther(tokenPrice);
-        setPrice(convert.toString());
-      }
+      const ethersProvider = new ethers.providers.JsonRpcProvider(
+        "https://polygon-rpc.com"
+      );
+      // const signer = ethersProvider.getSigner();
+      const contract = new ethers.Contract(
+        presaleAddress,
+        PresaleABI,
+        ethersProvider
+      );
+      const tokenPrice = await contract.tokenPrice();
+      const convert = ethers.utils.formatEther(tokenPrice);
+      setPrice(convert.toString());
     } catch (error) {
       console.log(error);
     }
@@ -239,14 +232,17 @@ export default function Presale() {
 
   useEffect(() => {
     owner();
-    presaleTotalTokens();
-    tokensSold();
-    tokenPrice();
     purchasedTokens();
     getBalance();
     // getquery();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [address]);
+
+  useEffect(() => {
+    presaleTotalTokens();
+    tokenPrice();
+    tokensSold();
+  }, []);
 
   return (
     <div id="buynow">
@@ -488,7 +484,7 @@ export default function Presale() {
                   </div>
                   <div className="flex gap-[4px] mb-2 max-sm:flex-wrap">
                     <span className="text-[16px] text-[#CDCDCD] mt-2">
-                    Receiver Address:
+                      Receiver Address:
                     </span>
                     <input
                       placeholder="Reciever Address"
@@ -509,6 +505,7 @@ export default function Presale() {
                   className="w-[350px] h-[1px]"
                 />
               </div>
+              <div className="flex flex-col">
               <div className="flex gap-16 mb-2">
                 <span className="text-[16px] text-[#CDCDCD] mt-2">
                   Quantity:
@@ -517,10 +514,14 @@ export default function Presale() {
                   placeholder="Quantity"
                   className="font-semibold flex text-white border-1 border-gray-500 bg-transparent rounded-[100px] px-4 py-2 text-base max-sm:max-w-[100px]"
                   type="number"
-                  value={quantity || 1}
+                  value={quantity}
                   onChange={(e) => setQuantity(e.target.value)}
-                  min={1}
+                  // min={10}
                 />
+              </div>
+                {quantity < 10 && (
+                  <p className="text-red-500">Quantity must be greater than 10</p>
+                )}
               </div>
               <div className="mt-2 mb-2 flex justify-center items-center">
                 <Image
