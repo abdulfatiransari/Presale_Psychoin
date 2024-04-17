@@ -25,7 +25,7 @@ export default function Footer() {
     >
       <div className="4xl1:flex 4xl1:justify-center 4xl1:items-center">
       <div className="4xl1:max-w-[1440px]">
-      <div className="flex justify-between items-center max-md:flex-wrap ">
+      {/* <div className="flex justify-between items-center max-md:flex-wrap ">
         <div className="flex flex-col w-[515px]">
           <h4 className="font-semibold text-xl">Subscribe to Newsletter</h4>
           <p className="text-[#CDCDCD] text-base mt-4">
@@ -50,9 +50,9 @@ export default function Footer() {
             Subscribe
           </Button>
         </div>
-      </div>
+      </div> */}
 
-      <Image src={"/img/Line 2.png"} alt="line" width={0} height={0} className="w-full h-[1px] mt-16 mb-18" />
+      {/* <Image src={"/img/Line 2.png"} alt="line" width={0} height={0} className="w-full h-[1px] mt-16 mb-18" /> */}
 
       <div className="mt-14 w-full flex justify-between items-center flex-wrap">
         <div className="flex flex-col md:w-[331px] ">

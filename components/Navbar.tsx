@@ -26,7 +26,7 @@ export default function Header() {
     { id: "/pdf/whitepaper.pdf", label: "Whitepaper", newTab: true },
     { id: "#team", label: "Team" },
     { id: "#support", label: "Support" },
-    { id: "#socials", label: "Socials" },
+    // { id: "https://www.instagram.com/psychoin_official?igsh=eDlqbHRyZ2VuMGRt", label: "Socials" },
   ];
 
   const router = useRouter();
@@ -82,7 +82,19 @@ export default function Header() {
           ))}
         </NavbarContent>
         <NavbarContent justify="end">
-          <NavbarItem>
+          <NavbarItem className="flex gap-4 max-sm:gap-2">
+          <Button
+              className="max-md:!hidden font-semibold flex text-white rounded-[100px] px-8 max-sm:px-4 max-sm:py-2 py-6 text-base"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(145, 173, 186, 0.8) -11.36%, rgba(32, 81, 102, 0.096) 104.55%)",
+                border: "1px solid #FFFFFF",
+              }}
+            >
+              <a href="https://www.instagram.com/psychoin_official?igsh=eDlqbHRyZ2VuMGRt">
+              Socials
+              </a>
+            </Button>
             <Button
               onClick={() => open()}
               className="font-semibold -mr-4 flex text-white rounded-[100px] px-8 max-sm:px-4 max-sm:py-2 py-6 text-base"
@@ -97,6 +109,8 @@ export default function Header() {
           </NavbarItem>
         </NavbarContent>
         {isMenuOpen && (
+          <div>
+
           <NavbarMenu className="bg-[#000000] py-10 px-8">
             {menuItems.map((item) => (
               <NavbarMenuItem key={item.id}>
@@ -110,7 +124,23 @@ export default function Header() {
                 </div>
               </NavbarMenuItem>
             ))}
+            <NavbarMenuItem className="hidden max-md:block">
+            <Button
+              className="font-semibold flex text-white rounded-[100px] px-8 max-sm:px-4 max-sm:py-2 py-6 text-base"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(145, 173, 186, 0.8) -11.36%, rgba(32, 81, 102, 0.096) 104.55%)",
+                border: "1px solid #FFFFFF",
+              }}
+            >
+              <a href="https://www.instagram.com/psychoin_official?igsh=eDlqbHRyZ2VuMGRt">
+              Socials
+              </a>
+            </Button>
+            </NavbarMenuItem>
           </NavbarMenu>
+          </div>
+          
         )}
       </Navbar>
       <Image

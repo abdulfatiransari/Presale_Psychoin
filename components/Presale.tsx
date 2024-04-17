@@ -313,7 +313,7 @@ export default function Presale() {
                   variant="underlined"
                   classNames={{
                     tabList:
-                      "w-full relative rounded-none p-0 border-b border-divider gap-[100px]",
+                      "w-full relative rounded-none p-0 border-b border-divider gap-[100px] max-sm:gap-[20px]",
                     cursor: "w-full bg-white",
                     tab: "max-w-fit px-0 h-10",
                     tabContent: "group-data-[selected=true]:text-[#06b6d4]",
@@ -327,13 +327,13 @@ export default function Presale() {
                         onClick={() => setKeys("crypto")}
                       >
                         <span
-                          className={`text-[16px] font-bold ${
+                          className={`text-[16px] max-sm:text-[14px] font-bold ${
                             keys === "crypto"
                               ? "text-[#6D00CC]"
                               : "text-[#CDCDCD]"
                           } cursor-pointer`}
                         >
-                          Buy Crypto
+                          Buy with Crypto (Matic)
                         </span>
                       </div>
                     }
@@ -346,13 +346,13 @@ export default function Presale() {
                         onClick={() => setKeys("fiat")}
                       >
                         <span
-                          className={`text-[16px] font-bold ${
+                          className={`text-[16px] max-sm:text-[14px] font-bold ${
                             keys === "fiat"
                               ? "text-[#6D00CC]"
                               : "text-[#CDCDCD]"
                           } cursor-pointer`}
                         >
-                          Buy Fiat
+                          Buy with Fiat
                         </span>
                       </div>
                     }
@@ -425,7 +425,7 @@ export default function Presale() {
                   showValueLabel={true}
                 />
               </div>
-              {keys === "crypto" && (
+              {/* {keys === "crypto" && ( */}
                 <>
                   <div className="w-full gap-[200px] flex">
                     <div>
@@ -453,7 +453,7 @@ export default function Presale() {
                     />
                   </div>
                 </>
-              )}
+              {/* )} */}
               <div className="flex justify-start gap-[4px] mb-2">
                 <span className="text-[16px] text-[#CDCDCD] mt-2 ">
                   You Purchased:
