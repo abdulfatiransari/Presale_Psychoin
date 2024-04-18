@@ -12,13 +12,13 @@ export default async function handler(
   res: NextApiResponse<any>
 ) {
   // if (req.method === "GET") {
-  //   const webhookEndpoint = await stripe.webhookEndpoints.create({
-  //     enabled_events: ["charge.succeeded", "charge.failed"],
-  //     // url: "https://psychoin.vercel.app/api/webhooks-caller",
-  //     url: "https://530c-175-107-217-4.ngrok-free.app/api/webhooks-caller"
-  //   });
-  //   console.log(webhookEndpoint);
-  //   res.status(200).json({ name: "John Doe" });
+    const webhookEndpoint = await stripe.webhookEndpoints.create({
+      enabled_events: ["charge.succeeded", "charge.failed"],
+      url: "https://psychoin.vercel.app/api/webhooks-caller",
+      // url: "https://d0aa-175-107-217-4.ngrok-free.app/api/webhooks-caller"
+    });
+    console.log(webhookEndpoint);
+    res.status(200).json({ name: "John Doe" });
   // } else {
     const body = req.body;
     const querySnapshot = await getDocs(collection(fireDB, "users"));
