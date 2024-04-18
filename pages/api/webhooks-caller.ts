@@ -11,16 +11,17 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  // if (req.method === "GET") {
+  if (req.method === "GET") {
     const webhookEndpoint = await stripe.webhookEndpoints.create({
-      enabled_events: ["charge.succeeded", "charge.failed"],
+      enabled_events: ["*"],
       url: "https://psychoin.vercel.app/api/webhooks-caller",
       // url: "https://d0aa-175-107-217-4.ngrok-free.app/api/webhooks-caller"
     });
     console.log(webhookEndpoint);
     res.status(200).json({ name: "John Doe" });
-  // } else {
+  } else {
     const body = req.body;
+    console.log(body)
     const querySnapshot = await getDocs(collection(fireDB, "users"));
     const previousJson = Array.from(querySnapshot.docs).map((snapshot) => ({
       ...snapshot.data(),
@@ -49,7 +50,7 @@ export default async function handler(
     });
 
     res.status(200).json(body);
-  // }
+  }
 }
 
 
