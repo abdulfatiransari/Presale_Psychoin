@@ -11,24 +11,24 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  if (req.method === "GET") {
-    const webhookEndpoint = await stripe.webhookEndpoints.create({
-      enabled_events: ["*"],
-      url: "https://psychoin.vercel.app/api/webhooks-caller",
-      // url: "https://d0aa-175-107-217-4.ngrok-free.app/api/webhooks-caller"
-    });
-    console.log(webhookEndpoint);
-    res.status(200).json({ name: "John Doe" });
-  } else {
-    const body = req.body;
-    console.log(body)
+  // if (req.method === "GET") {
+  //   const webhookEndpoint = await stripe.webhookEndpoints.create({
+  //     enabled_events: ["*"],
+  //     url: "https://psychoin.vercel.app/api/webhooks-caller",
+  //     // url: "https://d0aa-175-107-217-4.ngrok-free.app/api/webhooks-caller"
+  //   });
+  //   console.log(webhookEndpoint);
+  //   res.status(200).json({ name: "John Doe" });
+  // } else {
+    // const body = req.body;
+    // console.log(body)
     
     const querySnapshot = await getDocs(collection(fireDB, "users"));
     const previousJson = Array.from(querySnapshot.docs).map((snapshot) => ({
       ...snapshot.data(),
       id: snapshot.id,
     }));
-    const sessions = previousJson.filter((a: any) => !a.status);
+    const sessions = previousJson;
     sessions.forEach(async (session: any) => {
       try {
         const currentSession = await stripe.checkout.sessions.retrieve(
@@ -40,7 +40,7 @@ export default async function handler(
         ) {
           if (currentSession.payment_status === "paid") {
             console.log("Paid");
-            sendTokenByFiat(session.values.walletAddress, session.values.quantity)
+            await sendTokenByFiat(session.values.walletAddress, session.values.quantity)
             updateDoc(doc(fireDB, "users", session.id), {
               status: "Paid",
             });
@@ -56,8 +56,8 @@ export default async function handler(
       }
     });
 
-    res.status(200).json(body);
-  }
+    res.status(200).json({body:""});
+  // }
 }
 
 
