@@ -19,7 +19,7 @@ export default function Presale() {
   const [presaleTotalToken, setPresaleTotalToken] = useState<string>();
   const [tokensRemains, settokensRemains] = useState<string>("");
   const [price, setPrice] = useState<any>();
-  const [quantity, setQuantity] = useState<any>("10");
+  const [quantity, setQuantity] = useState<any>("1");
   const [recieverAddress, setRecieverAddress] = useState<string>();
   const [youPurchased, setYouPurchased] = useState<number>();
   const [loading, setLoading] = useState(false);
@@ -205,10 +205,10 @@ export default function Presale() {
 
       setLoading(true);
 
-      if(quantity < 10){
-        setLoading(false);
-        return toast.error("Quantity must be greater or equal than 10");
-      }
+      // if(quantity < 10){
+      //   setLoading(false);
+      //   return toast.error("Quantity must be greater or equal than 10");
+      // }
 
       const response = await axios.post("/api/createNormalSession", {
         amount: Math.round(price.toString() * 100),
@@ -216,6 +216,8 @@ export default function Presale() {
         tokenAddress: presaleAddress,
         walletAddress: recieverAddress,
       });
+
+      console.log(response)
 
       const { url } = response.data;
       localStorage.removeItem("toastRead");
