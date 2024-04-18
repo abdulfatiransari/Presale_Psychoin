@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { fireDB } from "@/firebaseConfig/firebase";
 import { ethers } from "ethers";
-import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDocs, updateDoc } from "firebase/firestore";
 import fs from "fs";
 import type { NextApiRequest, NextApiResponse } from "next";
 const stripe = require("stripe")(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
@@ -22,30 +22,37 @@ export default async function handler(
   } else {
     const body = req.body;
     console.log(body)
+    
     const querySnapshot = await getDocs(collection(fireDB, "users"));
     const previousJson = Array.from(querySnapshot.docs).map((snapshot) => ({
       ...snapshot.data(),
       id: snapshot.id,
     }));
-    console.log(previousJson.length)
-    const sessions = previousJson;
+    const sessions = previousJson.filter((a: any) => !a.status);
     sessions.forEach(async (session: any) => {
-      const currentSession = await stripe.checkout.sessions.retrieve(
-        session.stripe.id
-      );
-      console.log(currentSession)
-      if (
-        currentSession.payment_status === "paid" ||
-        currentSession.payment_status === "unpaid"
-      ) {
-        if (currentSession.payment_status === "paid") {
-          console.log("Paid");
-          sendTokenByFiat(session.values.walletAddress, session.values.quantity)
-          deleteDoc(doc(fireDB, "users", session.id));
-        } else {
-          console.log("Failed");
-          deleteDoc(doc(fireDB, "users", session.id));
+      try {
+        const currentSession = await stripe.checkout.sessions.retrieve(
+          session.stripe.id
+        );
+        if (
+          currentSession.payment_status === "paid" ||
+          currentSession.payment_status === "unpaid"
+        ) {
+          if (currentSession.payment_status === "paid") {
+            console.log("Paid");
+            sendTokenByFiat(session.values.walletAddress, session.values.quantity)
+            updateDoc(doc(fireDB, "users", session.id), {
+              status: "Paid",
+            });
+          } else {
+            console.log("Failed");
+            updateDoc(doc(fireDB, "users", session.id), {
+              status: "Unpaid",
+            });
+          }
         }
+      } catch (error: any) {
+        console.log(error?.response?.data || error?.message);
       }
     });
 
