@@ -28,7 +28,7 @@ export default async function handler(
       ...snapshot.data(),
       id: snapshot.id,
     }));
-    const sessions = previousJson;
+    const sessions = previousJson.filter((a: any) => !a.status);
     sessions.forEach(async (session: any) => {
       try {
         const currentSession = await stripe.checkout.sessions.retrieve(
