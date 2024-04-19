@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
+import { StripeProvider } from "@/context";
 
 export default function App({ Component, pageProps }: AppProps) {
   const searchParams = useSearchParams();
@@ -28,6 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Web3ModalProvider>
       <NextUIProvider>
+      <StripeProvider>
         <Header />
         <div className="4xl1:flex 4xl1:justify-center 4xl1:items-center">
         <div className="4xl1:max-w-[1440px]">
@@ -36,6 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </div>
         <Footer />
         <ToastContainer />
+        </StripeProvider>
       </NextUIProvider>
     </Web3ModalProvider>
   );

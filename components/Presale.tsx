@@ -10,6 +10,7 @@ import {
   useWeb3ModalProvider,
 } from "@web3modal/ethers5/react";
 import { useRouter } from "next/router";
+import { useStripeContext } from "@/context";
 
 export default function Presale() {
   const router = useRouter();
@@ -25,6 +26,7 @@ export default function Presale() {
   const [loading, setLoading] = useState(false);
   const [bal, setBal] = useState<string>();
   const [keys, setKeys] = useState<string>("crypto");
+  const {setClientSecret, setQuantity: setQ, setWalletAddress} = useStripeContext()
 
   const presaleAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
 
@@ -213,16 +215,18 @@ export default function Presale() {
       const response = await axios.post("/api/createNormalSession", {
         amount: Math.round(price.toString() * 100),
         quantity: quantity,
-        tokenAddress: presaleAddress,
         walletAddress: recieverAddress,
       });
 
       console.log(response)
 
-      const { url } = response.data;
+      const { client_secret, walletAddress, quantity:q } = response.data;
+      setWalletAddress(walletAddress)
+      setQ(q)
+      setClientSecret(client_secret)
       localStorage.removeItem("toastRead");
       setTimeout(() => {
-        router.push(url);
+        router.push('/checkout');
       }, 2000);
     } catch (error) {
       console.log(error);
