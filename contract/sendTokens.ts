@@ -7,7 +7,7 @@ const presaleAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
     try {
       if (!process.env.NEXT_PUBLIC_PRIVATE_KEY) {
         throw new Error("Private key is not defined");
-      }
+    }
       const provider = new ethers.providers.JsonRpcProvider(
         "https://polygon-mainnet.public.blastapi.io"
       );
@@ -25,7 +25,10 @@ const presaleAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
         }
       );
       await buyTokens.wait();
+
+      return true;
     } catch (error) {
       console.log(error);
+      return false;
     }
   };
