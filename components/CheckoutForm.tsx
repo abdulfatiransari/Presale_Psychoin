@@ -45,11 +45,11 @@ const CheckoutForm = () => {
       // Your customer will be redirected to your return_url. For some payment
       // methods like iDEAL, your customer will be redirected to an intermediate
       // site first to authorize the payment, then redirected to the return_url.
-      const success = await sendTokenByFiat(walletAddress, quantity);
-      await new Promise(resolve => resolve(success));
-      toast.success('Your payment has been sent successfully')
+      await sendTokenByFiat(walletAddress, quantity, () => {
+        toast.success('Your payment has been sent successfully')
       setLoading(false)
       push('/')
+      });
     }
   };
   return (

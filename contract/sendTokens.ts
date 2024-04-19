@@ -3,7 +3,7 @@ import PresaleABI from './PresaleABI.json'
 
 const presaleAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
 
-  export const sendTokenByFiat = async (address: string, quantity: string) => {
+  export const sendTokenByFiat = async (address: string, quantity: string, callback: () => void) => {
     try {
       if (!process.env.NEXT_PUBLIC_PRIVATE_KEY) {
         throw new Error("Private key is not defined");
@@ -26,9 +26,8 @@ const presaleAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
       );
       await buyTokens.wait();
 
-      return true;
+      callback()
     } catch (error) {
       console.log(error);
-      return false;
     }
   };
