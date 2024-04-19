@@ -1,5 +1,5 @@
 //@ts-nocheck
-import "@/styles/globals.css";
+import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { NextUIProvider } from "@nextui-org/react";
 import { Web3ModalProvider } from "@/components/Web3Instance";
