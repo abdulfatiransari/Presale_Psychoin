@@ -5,17 +5,17 @@ import React from "react";
 const mindsData = [
   {
     srcUrl: "/img/IconTeam1.svg",
-    description: "Over a decade of trading experience in Investment Banking",
+    description: "Bringing over a decade of experience and profound insight into the financial world",
   },
   {
     srcUrl: "/img/IconTeam2.svg",
     description:
-      "Bulletproof self-custody solution is rigorously tested and trusted by industry titans",
+      "Backed by a tech-savvy team with extensive expertise in Blockchain technology",
   },
   {
     srcUrl: "/img/IconTeam3.svg",
     description:
-      "With our carefully curated TMA at its core, your user experience will be nothing short of incredible",
+      "Guided by carefully selected experts in psychology and neuroscience, we aim to inspire trust and drive positive change in every aspect",
   },
 ];
 
