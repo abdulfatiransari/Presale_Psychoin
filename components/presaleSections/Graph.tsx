@@ -38,7 +38,7 @@ const Graph = () => {
         >
           <Image
             src={"/img/piechart.png"}
-            className="w-full h-full"
+            className="w-full lg:max-w-[50vw] h-full"
             width={1000}
             height={1000}
             alt="chart"
