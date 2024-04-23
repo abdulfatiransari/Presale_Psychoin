@@ -30,17 +30,17 @@ const Graph = () => {
       </div>
         </div>
         <div
-          className="rounded-[30px] bg-[#1A1D22] px-28 py-10 max-sm:px-4 pt-10 pb-6 flex justify-center items-center gap-6 relative top-[-28px] z-0"
+          className="rounded-[30px] bg-[#1A1D22] flex justify-center items-center gap-6 relative top-[-28px] z-0"
         //   style={{
         //     background:
         //       "linear-gradient(0deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), radial-gradient(54.52% 54.52% at 50% 0%, rgba(131, 172, 240, 0.2) 0.27%, rgba(131, 172, 240, 0) 100%)",
         //   }}
         >
           <Image
-            src={"/img/Image.svg"}
+            src={"/img/piechart.png"}
             className="w-full h-full"
-            width={100}
-            height={100}
+            width={1000}
+            height={1000}
             alt="chart"
           />
           {/* <Chart/> */}

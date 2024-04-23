@@ -9,9 +9,15 @@ const OwnWorld = () => {
         Your stake in Psychoin grants you a voice in our governance. Participate in decisions, engage in community challenges, and contribute to a brighter future for all members.</span>
       <div className="flex justify-center items-center mt-4">
         <a href="/pdf/whitepaper.pdf" target="_blank" rel="noopener noreferrer">
-        <Button className="font-semibold flex text-white bg-[#6D00CC] rounded-[100px] px-8 py-6 text-base" href="/pdf/whitepaper.pdf" target="_blank">
-        Whitepaper
-        </Button>
+          <Button
+            className="font-semibold flex text-white rounded-[100px] px-8 py-6 text-base"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(145, 173, 186, 0.8) -11.36%, rgba(32, 81, 102, 0.096) 104.55%)",
+              border: "1px solid #FFFFFF",
+            }} href="/pdf/whitepaper.pdf" target="_blank">
+            Whitepaper
+          </Button>
         </a>
       </div>
     </div>
