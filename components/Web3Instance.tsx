@@ -13,13 +13,14 @@ const mainnet = {
     explorerUrl: "https://polygonscan.com/",
     rpcUrl: "https://polygon-rpc.com/",
 };
-const mumbai = {
-    chainId: 80001,
-    name: "Mumbai",
-    currency: "MATIC",
-    explorerUrl: "https://mumbai.polygonscan.com/",
-    rpcUrl: "https://polygon-testnet.public.blastapi.io",
-};
+
+// const mumbai = {
+//     chainId: 80002,
+//     name: "Mumbai",
+//     currency: "MATIC",
+//     explorerUrl: "https://amoy.polygonscan.com/",
+//     rpcUrl: "https://polygon-amoy.blockpi.network/v1/rpc/public",
+// };
 
 // 3. Create modal
 const metadata = {
@@ -31,7 +32,7 @@ const metadata = {
 
 createWeb3Modal({
     ethersConfig: defaultConfig({ metadata }),
-    chains: [mumbai, mainnet],
+    chains: [mainnet],
     projectId,
     enableAnalytics: true, // Optional - defaults to your Cloud configuration
 });

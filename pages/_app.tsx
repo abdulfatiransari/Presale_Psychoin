@@ -13,33 +13,34 @@ import { useRouter } from "next/router";
 import { StripeProvider } from "@/context";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const searchParams = useSearchParams();
-  const {push} = useRouter()
-  useEffect(() => {
-    // fetch('/api/webhooks-caller')
-    if (searchParams.get("success")) {
-      toast.success("Payment Successfull");
-      push('/')
-    } else if (searchParams.get("canceled")) {
-      toast.error("Payment Cancelled");
-      push('/')
-    }
-  }, [searchParams]);
+    const searchParams = useSearchParams();
+    const { push } = useRouter();
+    useEffect(() => {
+        // fetch('/api/webhooks-caller')
+        if (searchParams.get("success")) {
+            toast.success("Payment Successfull");
+            push("/");
+        } else if (searchParams.get("canceled")) {
+            toast.error("Payment Cancelled");
+            push("/");
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [searchParams]);
 
-  return (
-    <Web3ModalProvider>
-      <NextUIProvider>
-      <StripeProvider>
-        <Header />
-        <div className="4xl1:flex 4xl1:justify-center 4xl1:items-center">
-        <div className="4xl1:max-w-[1440px]">
-        <Component {...pageProps} />
-        </div>
-        </div>
-        <Footer />
-        <ToastContainer />
-        </StripeProvider>
-      </NextUIProvider>
-    </Web3ModalProvider>
-  );
+    return (
+        <Web3ModalProvider>
+            <NextUIProvider>
+                <StripeProvider>
+                    <Header />
+                    <div className="4xl1:flex 4xl1:justify-center 4xl1:items-center">
+                        <div className="4xl1:max-w-[1440px]">
+                            <Component {...pageProps} />
+                        </div>
+                    </div>
+                    <Footer />
+                    <ToastContainer />
+                </StripeProvider>
+            </NextUIProvider>
+        </Web3ModalProvider>
+    );
 }

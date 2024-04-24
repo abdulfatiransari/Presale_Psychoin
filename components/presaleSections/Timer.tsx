@@ -6,7 +6,8 @@ import PresaleABI from "@/contract/PresaleABI.json";
 
 const Timer = () => {
     // const { address } = useWeb3ModalAccount();
-const contractAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
+    // const contractAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
+    const contractAddress = "0x80c6AeD0DD408F644be63ea37bc80650b7530a15";
 
     const [currentDate, setCurrentDate] = useState<any>({
         day: 0,
@@ -42,9 +43,9 @@ const contractAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
     };
     useEffect(() => {
         // if (address) {
-            convertTimestamp();
-            const intervalId = setInterval(convertTimestamp, 1000);
-            return () => clearInterval(intervalId);
+        convertTimestamp();
+        const intervalId = setInterval(convertTimestamp, 1000);
+        return () => clearInterval(intervalId);
         // }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
