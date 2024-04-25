@@ -172,7 +172,7 @@ export default function Presale() {
             // }
 
             const response = await axios.post("/api/createNormalSession", {
-                amount: Math.round(price.toString() * 100),
+                amount: Math.round(0.04 * 100 * parseFloat(quantity)),
                 quantity: quantity,
                 walletAddress: recieverAddress,
             });
@@ -388,7 +388,7 @@ export default function Presale() {
                             <>
                                 <div className="w-full gap-[200px] flex">
                                     <div>
-                                        <p className="text-[18px] text-white">{price ? price : "0.00"}</p>
+                                        <p className="text-[18px] text-white">0.04</p>
                                         <p className="text-[14px] text-[#CDCDCD] whitespace-nowrap">Current Price</p>
                                     </div>
                                     {/* <div>
