@@ -27,14 +27,14 @@ const Graph = () => {
                 </div>
                 <div
                     className="rounded-[30px] bg-[#1A1D22] flex justify-center items-center gap-6 relative top-[-28px] z-0"
-                    //   style={{
-                    //     background:
-                    //       "linear-gradient(0deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), radial-gradient(54.52% 54.52% at 50% 0%, rgba(131, 172, 240, 0.2) 0.27%, rgba(131, 172, 240, 0) 100%)",
-                    //   }}
+                //   style={{
+                //     background:
+                //       "linear-gradient(0deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)), radial-gradient(54.52% 54.52% at 50% 0%, rgba(131, 172, 240, 0.2) 0.27%, rgba(131, 172, 240, 0) 100%)",
+                //   }}
                 >
                     <Image
                         src={"/img/piechart.png"}
-                        className="w-full lg:max-w-[50vw] h-full"
+                        className="w-full  h-full"
                         width={1000}
                         height={1000}
                         alt="chart"
