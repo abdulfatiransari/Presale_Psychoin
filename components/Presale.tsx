@@ -35,6 +35,7 @@ export default function Presale() {
 
   // const presaleAddress = "0x3974f11ff40dEF3Ae5b17aE3Db3C9Fb6cD8A385A";
   const presaleAddress = "0x80c6AeD0DD408F644be63ea37bc80650b7530a15";
+  const tokenAddress = "0xd06ab1cC4daaf8091C74BaF6222b91BC4770A366"
 
   const owner = async () => {
     try {
@@ -252,15 +253,15 @@ export default function Presale() {
     }
   };
 
-    const shortenAddress = (presaleAddress: string) => {
-      if (!presaleAddress) return "";
-      return `${presaleAddress.slice(0, 14)}...${presaleAddress.slice(-4)}`;
+    const shortenAddress = (tokenAddress: string) => {
+      if (!tokenAddress) return "";
+      return `${tokenAddress.slice(0, 14)}...${tokenAddress.slice(-4)}`;
     };
 
     // Function to copy the address to clipboard and show toast
     const copyToClipboard = () => {
       navigator.clipboard
-        .writeText(presaleAddress)
+        .writeText(tokenAddress)
         .then(() => {
           toast.success("ERC20 (Polygon) Wallet Address copied.");
         })
@@ -624,8 +625,10 @@ export default function Presale() {
               <p className="text-white font-bold text-[16px] mt-3 mb-2">
                 ERC20 (Polygon) Wallet:
               </p>
-              <div className="flex justify-between items-center text-white border border-gray-500 bg-transparent rounded-full px-4 py-2 text-base font-semibold">
-                <span>{shortenAddress(presaleAddress)}</span>
+              <div className="flex justify-between items-center text-white border border-gray-500 bg-transparent rounded-full px-4 py-2 text-base font-semibold cursor-pointer">
+                <a href="https://polygonscan.com/address/0xd06ab1cC4daaf8091C74BaF6222b91BC4770A366">
+                <span>{shortenAddress(tokenAddress)}</span>
+                </a>
                 <button
                   className="ml-2 text-white"
                   onClick={copyToClipboard}
