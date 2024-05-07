@@ -240,7 +240,6 @@ export default function Presale() {
 
     return (
         <div id="buynow">
-            sold
             <div
                 className="flex flex-col max-w-full pl-28 pr-16 pt-10 pb-24 max-md:px-8 max-sm:px-4"
                 style={{
