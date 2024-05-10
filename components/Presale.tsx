@@ -596,7 +596,7 @@ export default function Presale() {
                                 />
                             </div>
                             <div className="flex justify-center">
-                                <a href="https://t.me/psychointoken">
+                                <a href="https://t.me/psychoinofficialproject">
                                     <Button className="font-semibold flex text-white bg-[#0099D9] rounded-[100px] px-8 py-6 text-[17px]">
                                         <FaTelegramPlane className="text-[26px] mt-1" />
                                         Join Telegram
