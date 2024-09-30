@@ -2,7 +2,7 @@
 
 import { NextApiRequest, NextApiResponse } from "next";
 import Stripe from "stripe";
-const stripe = new Stripe('sk_test_51NjhAGE8z6GTOxFEZBf7zyeKqsYU0Hh3SJbPnBQC5DJnHkIDkhitLFD5Ff1EhFxIRXZdBqQHIejauu3lNrChbFSl00LMvI8Pcu');
+const stripe = new Stripe('');
 const OnrampSessionResource = Stripe.StripeResource.extend({
     create: Stripe.StripeResource.method({
         method: 'POST',
